@@ -1,23 +1,42 @@
 @font-face {
+  font-family: 'Muller Light';
+  src: url('../fonts/MullerLight.woff') format('woff');
+  font-weight: lighter;
+  /*400*/
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Muller Regular';
   src: url('../fonts/MullerRegular.woff') format('woff');
   font-weight: normal;
+  /*500*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller Medium';
+  src: url('../fonts/MullerMedium.woff') format('woff');
+  font-weight: medium;
+  /*600*/
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Muller Bold';
   src: url('../fonts/MullerBold.woff') format('woff');
-  font-weight: normal;
+  font-weight: bold;
+  /*800*/
   font-style: normal;
 }
 
 :root {
-  --color-main:  #CC9933;
+  --color-main: #CC9933;
   --color-black: #000;
   --color-gray: #666;
   --color-dark-gray: #333;
   --color-white: #fff;
+  font-family: 'Muller Regular';
 }
 
 * {
@@ -43,7 +62,7 @@ a:hover {
 
 .head-name {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: lighter;
 }
 
 fieldset {
@@ -53,7 +72,7 @@ fieldset {
 .btn-gold {
   padding: 25px 30px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--color-white);
   background-color: var(--color-main);
   border: none;
@@ -69,9 +88,9 @@ fieldset {
 
 
 .btn-transp {
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--color-main);
   background-color: transparent;
   border: 1px solid var(--color-main);
@@ -113,10 +132,10 @@ fieldset {
 .top-header-phone {
   margin-left: 30px;
   align-self: center;
-  font-family: 'Muller Bold';
+  font-weight: bold;
   font-size: 22px;
   color: var(--color-gray);
-  
+
 }
 
 
@@ -160,7 +179,7 @@ fieldset {
 
 /*Pseudoelem margins*/
 
-.header-nav  > ul:nth-child(1) {
+.header-nav>ul:nth-child(1) {
   margin-right: 133px;
 }
 
@@ -204,7 +223,7 @@ fieldset {
   content: '';
   color: #bebebe;
   font-size: 14px;
-  font-family: 'Muller Regular';
+  font-weight: normal;
 }
 
 .header-search-button {
@@ -246,19 +265,15 @@ fieldset {
   padding-left: 20px;
   padding-top: 24px;
   padding-bottom: 27px;
-  margin-bottom: 29px;
-  font-family: 'Muller Regular';
+  margin-bottom: 25px;
+  font-weight: normal;
   font-size: 14px;
-  background-color:var(--color-white);
+  background-color: var(--color-white);
   border: 1px solid var(--color-white);
   border-radius: 10px;
   outline: none;
 }
 
-.booking-btn {
-  margin-top: -10px;
-
-}
 
 
 .fast-booking-input::placeholder {
@@ -318,8 +333,7 @@ fieldset {
 .special-offer-price {
   display: inline-block;
   font-size: 35px;
-  font-weight: 300;
-  font-family: 'Muller Regular';
+  font-weight: lighter;
   color: var(--color-white);
   opacity: 0.5;
 }
@@ -413,12 +427,12 @@ fieldset {
 .service-desc {
   max-width: 69%;
   margin-left: 45px;
-  margin-top: 8px;
+  margin-top: 5px;
   line-height: 2;
 }
 
 .advantages {
-  margin-top: 42px;
+  margin-top: 46px;
 }
 
 .head-advantages {
@@ -522,7 +536,7 @@ fieldset {
 /*Pseudoelem with margins*/
 
 .accomm-list-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
 .accomm-list-item:nth-child(3),
@@ -535,7 +549,7 @@ fieldset {
 
 .accomm-list-item {
   max-width: 373px;
-  height: 445px;
+  height: 441px;
   padding-bottom: 40px;
   margin-bottom: 24px;
   background-color: var(--color-white);
@@ -548,7 +562,7 @@ fieldset {
 
 .accomm-price {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 44px;
   margin-top: 30px;
 }
 
@@ -559,7 +573,7 @@ fieldset {
 
 .accomm-price-big {
   font-size: 22px;
-  font-family: 'Muller Bold';
+  font-weight: bold;
 }
 
 .rate-star:not(:last-child) {
@@ -568,18 +582,18 @@ fieldset {
 
 .accomm-name {
   margin-top: 15px;
-  margin-left: 50px;
+  margin-left: 44px;
   font-size: 16px;
 }
 
 .accomm-place {
-  margin-left: 50px;
+  margin-left: 44px;
   margin-top: 15px;
   color: var(--color-gray);
 }
 
 .btn-accomm {
-  margin-left: 50px;
+  margin-left: 44px;
   margin-top: 23px;
 }
 
@@ -609,7 +623,7 @@ fieldset {
 }
 
 .last-section {
-  margin-top: 30px;
+  margin-top: 43px;
 }
 
 .contact-head {
@@ -641,14 +655,14 @@ fieldset {
 .contacts-container {
   background-color: var(--color-white);
   border-radius: 10px;
+  margin-top: 23px;
 }
 
 .contacts-list {
-  margin-top: 25px;
-  padding-left: 48px;
+  padding-left: 45px;
   padding-right: 48px;
   padding-top: 48px;
-  padding-bottom: 40px;
+  padding-bottom: 48px;
 }
 
 .contact-block {
@@ -661,15 +675,15 @@ fieldset {
 
 /*pseudoelem margins*/
 
-.contact-block > h3:nth-child(1) {
+.contact-block>h3:nth-child(1) {
   margin-right: 75px;
 }
 
-.contact-block:nth-child(2) > h3:nth-child(1) {
+.contact-block:nth-child(2)>h3:nth-child(1) {
   margin-right: 36px;
 }
 
-.contact-block:nth-child(4) > h3:nth-child(1) {
+.contact-block:nth-child(4)>h3:nth-child(1) {
   margin-right: 64px;
 }
 
@@ -678,17 +692,17 @@ fieldset {
 /*///pseudoelem margins*/
 
 .contact-block:not(:first-child) {
-  padding-top: 30px;
+  padding-top: 27px;
 }
 
 .contact-name {
   font-size: 22px;
-  font-family: 'Muller Bold';
+  font-weight: bold;
   color: var(--color-gray);
 }
 
 .contact-descr {
-  width: 60%;
+  width: 61%;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-dark-gray);
@@ -708,7 +722,7 @@ fieldset {
 
 .write-us {
   width: 340px;
-  margin-top: 140px;
+  margin-top: 136px;
   /*margin-right: 175px*/
 }
 
@@ -721,8 +735,9 @@ fieldset {
 .write-us-input {
   display: block;
   width: 100%;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   padding: 26px;
+  padding-left: 20px;
   resize: none;
   outline: none;
   background-color: var(--color-white);
@@ -730,14 +745,17 @@ fieldset {
   border-radius: 10px;
 }
 
+
+
 .write-us-input::placeholder {
   color: var(--color-gray);
-  font-family: 'Muller Regular';
+  font-weight: normal;
   font-size: 16px;
 }
 
 .write-us-text {
   height: 110px;
+  padding-top: 20px;
 }
 
 .btn-contact-us {
@@ -761,7 +779,7 @@ fieldset {
 
 /* Pseudoelem margins*/
 .footer>div:nth-child(-n+2) {
-  margin-right: 104px;
+  margin-right: 106px;
 
 }
 
@@ -774,26 +792,26 @@ fieldset {
 .footer-name {
   margin-bottom: 35px;
   font-size: 16px;
-  font-family: 'Muller Regular';
+  font-weight: normal;
   line-height: 25px;
 }
 
 .footer-disclaimer {
   margin-bottom: 40px;
   font-size: 16px;
-  font-family: 'Muller Regular';
+  font-weight: normal;
   line-height: 2;
 }
 
 .footer-contacts {
   font-size: 16px;
-  font-family: 'Muller Regular';
+  font-weight: normal;
 }
 
 .footer-adress {
   margin-right: 150px;
   font-size: 16px;
-  font-family: 'Muller Regular';
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -823,12 +841,12 @@ fieldset {
   opacity: 0.5;
 }
 
-.social-media > li {
+.social-media>li {
   transition: 0.8s;
 }
 
-.social-media > li:hover {
-  transform: scale(1.1,1.1);
+.social-media>li:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .footer-tripadv {
