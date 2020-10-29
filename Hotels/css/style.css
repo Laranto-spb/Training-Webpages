@@ -1,30 +1,34 @@
 @font-face {
-  font-family: 'Muller Light';
-  src: url('../fonts/MullerLight.woff') format('woff');
+  font-family: 'Muller';
+  src: url('../fonts/MullerLight.woff') format('woff'),
+    url('../fonts/MullerLight.woff2') format('woff2');
   font-weight: lighter;
   /*400*/
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Muller Regular';
-  src: url('../fonts/MullerRegular.woff') format('woff');
+  font-family: 'Muller';
+  src: url('../fonts/MullerRegular.woff') format('woff'),
+    url('../fonts/MullerRegular.woff2') format('woff2');
   font-weight: normal;
   /*500*/
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Muller Medium';
-  src: url('../fonts/MullerMedium.woff') format('woff');
+  font-family: 'Muller';
+  src: url('../fonts/MullerMedium.woff') format('woff'),
+    url('../fonts/MullerMedium.woff2') format('woff2');
   font-weight: medium;
   /*600*/
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Muller Bold';
-  src: url('../fonts/MullerBold.woff') format('woff');
+  font-family: 'Muller';
+  src: url('../fonts/MullerBold.woff') format('woff'),
+    url('../fonts/MullerBold.woff2') format('woff2');
   font-weight: bold;
   /*800*/
   font-style: normal;
@@ -36,7 +40,7 @@
   --color-gray: #666;
   --color-dark-gray: #333;
   --color-white: #fff;
-  font-family: 'Muller Regular';
+  font-family: 'Muller';
 }
 
 * {
@@ -52,7 +56,6 @@ a {
   text-decoration: none;
   color: var(--color-black);
   background-color: #f1f1f1;
-  font-family: 'Muller Regular';
   transition: opacity 0.8s;
 }
 
@@ -79,7 +82,7 @@ fieldset {
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  transition: 0.8s;
+  transition: transform 0.8s;
 }
 
 .btn-gold:hover {
@@ -97,7 +100,7 @@ fieldset {
   border-radius: 12px;
   outline: none;
   cursor: pointer;
-  transition: 0.8s;
+  transition: transform 0.8s;
 }
 
 .btn-transp:hover {
@@ -142,7 +145,7 @@ fieldset {
 
 /*Pseudoelem margins*/
 .top-header-left:nth-child(1) {
-  margin-right: 543px;
+  margin-right: 540px;
 }
 
 /*///Pseudoelem margins*/
@@ -157,7 +160,7 @@ fieldset {
   background-image: url('../img/Arrow-cab.png');
   background-repeat: no-repeat;
   background-position: left;
-  transition: 0.8s;
+  transition: transform 0.8s;
 }
 
 .top-header-cab:hover {
@@ -236,7 +239,7 @@ fieldset {
   cursor: pointer;
   border: none;
   padding-right: 20px;
-  transition: 0.8s;
+  transition: transform 0.8s;
 }
 
 .header-search-button:hover {
@@ -349,7 +352,7 @@ fieldset {
   background-image: url('../img/Arrow.png');
   background-repeat: no-repeat;
   background-position: right;
-  transition: 0.8s;
+  transition: opacity 0.8s;
 
 }
 
@@ -425,7 +428,7 @@ fieldset {
 
 
 .service-desc {
-  max-width: 69%;
+  max-width: 71%;
   margin-left: 45px;
   margin-top: 5px;
   line-height: 2;
@@ -598,8 +601,8 @@ fieldset {
 }
 
 .all-hotels {
+  position: relative;
   width: 373px;
-
   background-image: url('../img/all-hotels.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -607,19 +610,24 @@ fieldset {
 
 .see-all-hotels {
   display: block;
+  margin-top: 368px;
+  margin-left: 38px;
   font-size: 22px;
   color: var(--color-white);
   background-color: transparent;
   background-image: url('../img/Arrow-white.png');
   background-repeat: no-repeat;
-  background-position-x: 324px;
+  background-position-x: 288px;
   background-position-y: center;
 }
 
-.see-all-hotels::before {
+.see-all-hotels::after {
   content: '';
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .last-section {
@@ -842,7 +850,7 @@ fieldset {
 }
 
 .social-media>li {
-  transition: 0.8s;
+  transition: transform 0.8s;
 }
 
 .social-media>li:hover {
