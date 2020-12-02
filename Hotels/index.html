@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Lagoona Hotels</title>
 </head>
@@ -11,36 +13,42 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="top-header">
-        <div class="top-header-left">
-          <img src="img/Logo.png" class="top-header-logo" alt="Logo">
-          <a href="tel:+7495322544834" class="top-header-phone">+7 495 322 54 48</a>
+      <div class="top-header row">
+        <div class="top-header-left col-lg-10">
+          <div class="row">
+            <img src="img/Logo.png" class="top-header-logo col-lg-4" alt="Logo">
+            <a href="tel:+7495322544834" class="top-header-phone col-lg-3">+7 495 322 54 48</a>
+          </div>
+
         </div>
-        <a href="#" class="top-header-cab"> Личный кабинет</a>
+        <a href="#" class="top-header-cab col-lg-2"> Личный кабинет</a>
       </div>
     </div>
     <div class="container">
       <nav class="header-nav">
-        <ul class="header-nav-list list">
-          <li class="header-nav-item"><a href="#" class="header-nav-link">О нас</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Услуги</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Преимущества</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Размещение</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Блог</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Контакты</a></li>
+        <div class="row">
+        <ul class="header-nav-list list col-lg-8 row">
+          <li class="header-nav-item col-lg-2"><a href="#" class="header-nav-link">О нас</a></li>
+          <li class="header-nav-item col-lg-1"><a href="#" class="header-nav-link">Услуги</a></li>
+          <li class="header-nav-item col-lg-3"><a href="#" class="header-nav-link">Преимущества</a></li>
+          <li class="header-nav-item col-lg-2"><a href="#" class="header-nav-link">Размещение</a></li>
+          <li class="header-nav-item col-lg-1"><a href="#" class="header-nav-link">Блог</a></li>
+          <li class="header-nav-item col-lg-3"><a href="#" class="header-nav-link">Контакты</a></li>
         </ul>
-        <form action="search" class="header-menu-search">
+        <form action="search" class="header-menu-search col-lg-4">
           <input type="text" placeholder="Поиск" class="header-search-input">
           <button type="submit" class="header-search-button"></button>
-        </form>
+        </form>          
+        </div>
+
       </nav>
     </div>
   </header>
   <main>
     <section class="first-section">
       <div class="container">
-        <div class="booking">
-          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="fast-booking">
+        <div class="booking row">
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="fast-booking col-lg-5">
             <h2 class="head-name head-legend">Быстрая бронь</h2>
             <input type="text" name="City" placeholder="Город" class="fast-booking-input" required>
             <input type="text" name="Category" placeholder="Категория номера" class="fast-booking-input">
@@ -50,7 +58,8 @@
             <button class="booking-btn btn-gold">Найти номер</button>
             <p class="booking-count"><a href="#" class="booking-count-link">9756</a> предложений доступно</p>
           </form>
-          <section class="special-offer">
+          <div class="col-lg-1"></div>
+          <section class="special-offer col-lg-6">
             <h2 class="head-name head-special-offer">Спецпредложение</h2>
             <article class="special-offer-item">
               <img src="img/Special.jpg" alt="special offer" class="special-offer-pic">
@@ -76,72 +85,108 @@
     <section class="service">
       <div class="container">
         <h2 class="head-name head-service">Услуги</h2>
-        <ul class="service-list">
-          <li class="service-list-item">
-            <img src="img/Exclusive.jpg" class="service-pic" alt="Exclusive">
-            <h3 class="service-name"><a href="#" class="service-name-link">Эксклюзивное обслуживание</a></h3>
-            <p class="service-desc">Равным образом постоянный количественный рост и сфера нашей активности</p>
+        <ul class="service-list row">
+          <li class="col-lg-6">
+            <div class="service-list-item">
+              <img src="img/Exclusive.jpg" class="service-pic" alt="Exclusive">
+              <h3 class="service-name"><a href="#" class="service-name-link">Эксклюзивное обслуживание</a></h3>
+              <p class="service-desc">Равным образом постоянный количественный рост и сфера нашей активности</p>
+            </div>
           </li>
-          <li class="service-list-item">
-            <img src="img/Table.jpg" class="service-pic" alt="Rent">
-            <h3 class="service-name"><a href="#" class="service-name-link">Аренда банкетных залов</a></h3>
-            <p class="service-desc">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных
-              форм.</p>
+          <li class="col-lg-6">
+            <div class="service-list-item">
+              <img src="img/Table.jpg" class="service-pic" alt="Rent">
+              <h3 class="service-name"><a href="#" class="service-name-link">Аренда банкетных залов</a></h3>
+              <p class="service-desc">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных
+                форм.</p>
+            </div>
           </li>
-          <li class="service-list-item">
-            <img src="img/Pool.jpg" class="service-pic" alt="Pool">
-            <h3 class="service-name"><a href="#" class="service-name-link">Сауны, бассейны, бани, фитнес-залы</a></h3>
-            <p class="service-desc">Не следует, однако забывать, что начало повседневной работы по формированию
-              позиции</p>
+          <li class="col-lg-6">
+            <div class="service-list-item">
+              <img src="img/Pool.jpg" class="service-pic" alt="Pool">
+              <h3 class="service-name"><a href="#" class="service-name-link">Сауны, бассейны, бани, фитнес-залы</a></h3>
+              <p class="service-desc">Не следует, однако забывать, что начало повседневной работы по формированию
+                позиции</p>
+            </div>
           </li>
 
-          <li class="service-list-item">
-            <img src="img/Cars.jpg" class="service-pic" alt="Cars">
-            <h3 class="service-name"><a href="#" class="service-name-link">Охраняемые автомобильные стоянки</a></h3>
-            <p class="service-desc">Не следует, однако забывать, что начало повседневной работы по формированию
-              позиции</p>
+          <li class="col-lg-6">
+            <div class="service-list-item">
+              <img src="img/Cars.jpg" class="service-pic" alt="Cars">
+              <h3 class="service-name"><a href="#" class="service-name-link">Охраняемые автомобильные стоянки</a></h3>
+              <p class="service-desc">Не следует, однако забывать, что начало повседневной работы по формированию
+                позиции</p>
+            </div>
           </li>
+
         </ul>
       </div>
     </section>
     <section class="advantages">
       <div class="container">
         <h2 class="head-name head-advantages">Преимущества</h2>
-        <ul class="advantages-list">
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-1">Идейные соображения высшего порядка, а также постоянный количественный
-              рост</p>
+        <ul class="advantages-list row">
+          <li class=" col-lg-3">
+            <div class="advantages-list-item">
+
+              <p class="advantages-desc adv-pic-1">Идейные соображения высшего порядка, а также постоянный
+                количественный
+                рост</p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-2">Значимость этих проблем настолько очевидна, что вопрос остается
-              открытым</p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-2">Значимость этих проблем настолько очевидна, что вопрос остается
+                открытым</p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-3">Таким образом реализация плановых заданий играет важную роль для
-              понимания</p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-3">Таким образом реализация плановых заданий играет важную роль для
+                понимания</p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-4">Повседневная практика показывает, что сложившаяся структура организации
-            </p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-4">Повседневная практика показывает, что сложившаяся структура
+                организации
+              </p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-5">Равным образом рамки и место обучения кадров способствует подготовки
-              сотрудника
-            </p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-5">Равным образом рамки и место обучения кадров способствует подготовки
+                сотрудника
+              </p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-6">Консультация с активом влечет за собой процесс внедрения услуг нашего
-              сервиса
-            </p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-6">Консультация с активом влечет за собой процесс внедрения услуг нашего
+                сервиса
+              </p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-7">Повседневная практика показывает, что дальнейшее развитие различных
-              форм</p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-7">Повседневная практика показывает, что дальнейшее развитие различных
+                форм</p>
+            </div>
+
           </li>
-          <li class="advantages-list-item">
-            <p class="advantages-desc adv-pic-8">Значимость этого настолько очевидна, что консультация наших экспертов
-              помогает
-            </p>
+          <li class="col-lg-3">
+            <div class="advantages-list-item">
+              <p class="advantages-desc adv-pic-8">Значимость этого настолько очевидна, что консультация наших экспертов
+                помогает
+              </p>
+            </div>
+
           </li>
         </ul>
       </div>
@@ -149,9 +194,9 @@
     <section class="accomm">
       <div class="container">
         <h2 class="head-name head-accomm">Размещение</h2>
-        <ul class="accomm-list">
-          <li class="accomm-list-item">
-            <article class="price-container">
+        <ul class="accomm-list row">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/1-hotel.jpg" alt="1-hotel">
               <p class="accomm-price"> от <span class="accomm-price-big">4 698 р </span> / ночь</p>
               <div class="raiting">
@@ -166,8 +211,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container  accomm-list-item">
               <img src="img/2-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">5 148 р </span> / ночь</p>
               <div class="raiting">
@@ -182,8 +227,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/3-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 254 р </span> / ночь</p>
               <div class="raiting">
@@ -198,8 +243,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container  accomm-list-item">
               <img src="img/4-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 320 р </span> / ночь</p>
               <div class="raiting">
@@ -214,8 +259,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/5-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 457 р </span> / ночь</p>
               <div class="raiting">
@@ -230,8 +275,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/6-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 490 р </span> / ночь</p>
               <div class="raiting">
@@ -246,8 +291,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/7-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 505 р </span> / ночь</p>
               <div class="raiting">
@@ -262,8 +307,8 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item">
-            <article class="price-container">
+          <li class="col-lg-4">
+            <article class="price-container accomm-list-item">
               <img src="img/8-hotel.jpg" alt="">
               <p class="accomm-price"> от <span class="accomm-price-big">6 824р </span> / ночь</p>
               <div class="raiting">
@@ -278,39 +323,42 @@
               <button class="btn-transp btn-accomm"> Номера </button>
             </article>
           </li>
-          <li class="accomm-list-item all-hotels">
+          <li class="col-lg-4">
+            <div class=" accomm-list-item all-hotels">
             <a href="#" class="see-all-hotels">Посмотреть все варианты</a>
+            </div>
+
           </li>
         </ul>
       </div>
     </section>
     <section class="last-section">
       <div class="container">
-        <div class="contacts">
-          <div class="left-contact">
+        <div class="contacts row">
+          <div class="left-contact col-lg-5">
             <h2 class="head-name contact-head"> Контакты</h2>
             <div class="contacts-container">
               <ul class="contacts-list">
-                <li class="contact-block">
-                  <h3 class="contact-name">Адрес</h3>
-                  <p class="contact-descr">Москва, улица Юности, дом 5 строение 4, офис 2</p>
+                <li class="contact-block row">
+                  <h3 class="contact-name col-lg-5">Адрес</h3>
+                  <p class="contact-descr col-lg-7">Москва, улица Юности, дом 5 строение 4, офис 2</p>
                 </li>
-                <li class="contact-block">
-                  <h3 class="contact-name">Телефоны</h3>
-                  <a href="tel:+74995356434" class="contact-descr contact-gold"> +7 (499) 535-64-34 <br>
+                <li class="contact-block row">
+                  <h3 class="contact-name col-lg-5">Телефоны</h3>
+                  <a href="tel:+74995356434" class="contact-descr contact-gold col-lg-6"> +7 (499) 535-64-34 <br>
                     +7 (495) 005-05-44</a>
                 </li>
-                <li class="contact-block">
-                  <h3 class="contact-name">E-mail</h3>
-                  <p class="contact-descr"><a href="mailto:lg.oona@mail.ru" class="contact-gold">lg.oona@mail.ru</a> по
+                <li class="contact-block row">
+                  <h3 class="contact-name col-lg-4">E-mail</h3>
+                  <p class="contact-descr col-lg-8"><a href="mailto:lg.oona@mail.ru" class="contact-gold">lg.oona@mail.ru</a> по
                     вопросам
                     бронирования
                     <a href="mailto:hotels.ln@mail.ru" class="contact-gold">hotels.ln@mail.ru</a> по вопросам
                     сотрудничества</p>
                 </li>
-                <li class="contact-block">
-                  <h3 class="contact-name">График</h3>
-                  <p class="contact-descr">Понедельник - пятница,
+                <li class="contact-block row">
+                  <h3 class="contact-name col-lg-5">График</h3>
+                  <p class="contact-descr col-lg-7">Понедельник - пятница,
                     с 10:0 до 19:00</p>
                 </li>
               </ul>
@@ -318,28 +366,31 @@
             </div>
 
           </div>
-
-          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="write-us">
+          <div class="col-lg-1"></div>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="write-us col-lg-4">
             <h2 class="write-us-head head-name">Напишите нам</h2>
             <input type="text" name="username" placeholder="Имя" class="write-us-input">
             <input type="tel" name="userphone" placeholder="+7" class="write-us-input" required>
             <textarea name="usermesage" placeholder="Сообщение..." class="write-us-input write-us-text"></textarea>
             <button class="btn-gold btn-contact-us">Отправить</button>
           </form>
+
+          <div class="col-lg-2"></div>
         </div>
       </div>
     </section>
     <footer>
       <div class="container">
-        <div class="footer">
-          <div class="footer-about">
+        <div class="footer row">
+          <div class="footer-about col-lg-4">
             <p class="footer-name">© 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»</p>
             <p class="footer-disclaimer">Представленная на сайте информация носит справочный характер и не является
               публичной офертой</p>
             <a href="#" class="gold-link">Политика конфиденциальности</a>
           </div>
+          <div class="col-lg-1"></div>
 
-          <div class="footer-contacts">
+          <div class="footer-contacts col-lg-6">
             <address class="footer-adress">11710, улица Юности, дом 5 строение 4, офис 2</address>
             <div class="footer-tel-container">
               <ul>
@@ -354,13 +405,16 @@
               </ul>
             </div>
           </div>
+          <div class="col-lg-1">
           <ul class="social-media">
             <li><a href="#" class="footer-social footer-tripadv"></a></li>
             <li><a href="#" class="footer-social footer-twitter"></a></li>
             <li><a href="#" class="footer-social footer-facebook"></a></li>
             <li><a href="#" class="footer-social footer-vk"></a></li>
             <li><a href="#" class="footer-social footer-google"></a></li>
-          </ul>
+          </ul>            
+          </div>
+
         </div>
       </div>
     </footer>

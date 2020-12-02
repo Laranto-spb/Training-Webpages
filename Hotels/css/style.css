@@ -44,10 +44,9 @@
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -112,24 +111,13 @@ fieldset {
   color: var(--color-main);
 }
 
-.container {
-  width: 1170px;
-  margin: 0 auto;
-}
-
+/* 
 .list {
   padding: 0;
-}
+} */
 
 .top-header {
-  display: flex;
   margin-top: 30px;
-  align-items: center;
-  /*justify-content: space-between;*/
-}
-
-.top-header-left {
-  display: flex;
 }
 
 .top-header-phone {
@@ -141,25 +129,17 @@ fieldset {
 
 }
 
-
-
-/*Pseudoelem margins*/
-.top-header-left:nth-child(1) {
-  margin-right: 540px;
-}
-
-/*///Pseudoelem margins*/
-
-
-
 .top-header-cab {
   padding-left: 20px;
-  margin-right: 10px;
+
   font-size: 16px;
   color: var(--color-main);
   background-image: url('../img/Arrow-cab.png');
   background-repeat: no-repeat;
-  background-position: left;
+  background-position-x: 30px;
+  align-self: center;
+  line-height: 1.4;
+  text-align: right;
   transition: transform 0.8s;
 }
 
@@ -168,45 +148,31 @@ fieldset {
 }
 
 .header-nav {
-  display: flex;
-  margin-top: 27px;
+  margin-top: 20px;
   padding-left: 20px;
   padding-top: 12px;
   padding-bottom: 10px;
   padding-right: 20px;
-  /*justify-content: space-between;*/
+
   align-items: center;
   background-color: var(--color-white);
   border-radius: 12px;
 }
 
-/*Pseudoelem margins*/
 
-.header-nav>ul:nth-child(1) {
-  margin-right: 133px;
-}
-
-
-/*////Pseudoelem margins*/
 
 .header-nav-list {
   display: flex;
+  align-items: center;
 }
-
 
 .header-nav-link {
   background-color: var(--color-white);
 }
 
 
-
-.header-nav-item:not(:last-child) {
-  margin-right: 45px;
-}
-
 .header-menu-search {
   display: flex;
-  width: 355px;
   height: 48px;
   padding-right: 20px;
   padding-left: 20px;
@@ -248,8 +214,7 @@ fieldset {
 
 
 .booking {
-  display: flex;
-  margin-top: 70px;
+  margin-top: 66px;
 }
 
 .head-legend {
@@ -258,7 +223,7 @@ fieldset {
 }
 
 .fast-booking {
-  width: 44.5%;
+
   border: none;
 }
 
@@ -299,8 +264,7 @@ fieldset {
 
 .special-offer {
   position: relative;
-  max-width: 51%;
-  margin-left: 56px;
+
 }
 
 .head-special-offer {
@@ -310,8 +274,7 @@ fieldset {
 
 .special-offer-item {
   position: relative;
-  width: 596px;
-  padding-top: 263px;
+  padding-top: 200px;
   padding-left: 42px;
   border-radius: 23px;
 }
@@ -320,7 +283,7 @@ fieldset {
   position: absolute;
   top: 0;
   left: 0;
-  width: 596px;
+  width: 100%;
   height: 538px;
 }
 
@@ -339,6 +302,7 @@ fieldset {
   font-weight: lighter;
   color: var(--color-white);
   opacity: 0.5;
+  margin: 0;
 }
 
 .special-offer-more {
@@ -366,11 +330,11 @@ fieldset {
 
 .head-about {
   margin-left: 40px;
-  margin-bottom: 10px;
 }
 
 .about-text {
   max-width: 76%;
+  margin-top: 0;
   margin-left: 40px;
   font-size: 16px;
   line-height: 2;
@@ -378,7 +342,7 @@ fieldset {
 }
 
 .service {
-  margin-top: 55px;
+  margin-top: 54px;
 }
 
 .head-service {
@@ -386,20 +350,9 @@ fieldset {
   margin-bottom: 20px;
 }
 
-.service-list {
-  display: flex;
-  flex-wrap: wrap;
-  /*justify-content: space-between;*/
+ul {
+  padding: 0;
 }
-
-/*Pseudoelem margins*/
-
-.service-list-item:nth-child(Odd) {
-  /*equal 2n-1*/
-  margin-right: 20px;
-}
-
-/*////Pseudoelem margins*/
 
 .service-list-item {
   max-width: 572px;
@@ -409,10 +362,13 @@ fieldset {
   border-radius: 15px;
 }
 
+.service-name {
+  margin-top: 30px;
+}
+
 .service-name-link {
   display: inline-block;
   margin-left: 45px;
-  margin-top: 32px;
   padding-right: 20px;
   font-size: 22px;
   font-weight: lighter;
@@ -421,10 +377,11 @@ fieldset {
   background-image: url('../img/Arrow.png');
   background-repeat: no-repeat;
   background-position: right;
-
 }
 
-
+.service-pic {
+  width: 100%;
+}
 
 
 .service-desc {
@@ -443,30 +400,10 @@ fieldset {
   margin-bottom: 24px;
 }
 
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-  /*justify-content: space-between*/
-  ;
-}
-
-/*Pseudoelem magins*/
-
-.advantages-list-item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.advantages-list-item:nth-child(4) {
-  margin-right: 0;
-}
-
-/*/////Pseudoelem magins*/
-
-
-
 .advantages-list-item {
   max-width: 276px;
   padding-left: 43px;
+  padding-top: 42px;
   padding-bottom: 32px;
   margin-bottom: 24px;
   background-color: var(--color-white);
@@ -514,9 +451,8 @@ fieldset {
 }
 
 .advantages-desc {
-  max-width: 80%;
+  max-width: 85%;
   padding-top: 68px;
-  margin-top: 46px;
   line-height: 2;
 }
 
@@ -529,26 +465,6 @@ fieldset {
   margin-bottom: 24px;
 }
 
-.accomm-list {
-  display: flex;
-  flex-wrap: wrap;
-  /*justify-content: space-between;*/
-
-}
-
-/*Pseudoelem with margins*/
-
-.accomm-list-item:not(:last-child) {
-  margin-right: 24px;
-}
-
-.accomm-list-item:nth-child(3),
-.accomm-list-item:nth-child(6) {
-  margin-right: 0;
-}
-
-/*/////Pseudoelem with margins*/
-
 
 .accomm-list-item {
   max-width: 373px;
@@ -557,6 +473,10 @@ fieldset {
   margin-bottom: 24px;
   background-color: var(--color-white);
   border-radius: 10px;
+}
+
+.accomm-list-item > img {
+  width: 100%;
 }
 
 .accomm-list-item:last-child {
@@ -597,12 +517,12 @@ fieldset {
 
 .btn-accomm {
   margin-left: 44px;
-  margin-top: 23px;
+  margin-top: 14px;
 }
 
 .all-hotels {
   position: relative;
-  width: 373px;
+  padding-top:360px;
   background-image: url('../img/all-hotels.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -610,7 +530,6 @@ fieldset {
 
 .see-all-hotels {
   display: block;
-  margin-top: 368px;
   margin-left: 38px;
   font-size: 22px;
   color: var(--color-white);
@@ -640,19 +559,9 @@ fieldset {
   border-radius: 10px;
 }
 
-.contacts {
-  display: flex;
-  /*justify-content: space-between;*/
-}
-
-.contacts>div:nth-child(1) {
-  margin-right: 180px;
-
-}
 
 .left-contact {
   position: relative;
-  width: 472px;
   display: block;
 }
 
@@ -674,30 +583,12 @@ fieldset {
 }
 
 .contact-block {
-  display: flex;
-  /*justify-content: space-between;*/
   align-items: baseline;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-gray);
 }
 
-/*pseudoelem margins*/
 
-.contact-block>h3:nth-child(1) {
-  margin-right: 75px;
-}
-
-.contact-block:nth-child(2)>h3:nth-child(1) {
-  margin-right: 36px;
-}
-
-.contact-block:nth-child(4)>h3:nth-child(1) {
-  margin-right: 64px;
-}
-
-
-
-/*///pseudoelem margins*/
 
 .contact-block:not(:first-child) {
   padding-top: 27px;
@@ -729,9 +620,7 @@ fieldset {
 }
 
 .write-us {
-  width: 340px;
   margin-top: 136px;
-  /*margin-right: 175px*/
 }
 
 .write-us-head {
@@ -785,17 +674,8 @@ fieldset {
   border-radius: 10px;
 }
 
-/* Pseudoelem margins*/
-.footer>div:nth-child(-n+2) {
-  margin-right: 106px;
 
-}
 
-/* ///Pseudoelem margins*/
-
-.footer-about {
-  max-width: 30%;
-}
 
 .footer-name {
   margin-bottom: 35px;
@@ -848,6 +728,8 @@ fieldset {
   background-color: transparent;
   opacity: 0.5;
 }
+
+
 
 .social-media>li {
   transition: transform 0.8s;
