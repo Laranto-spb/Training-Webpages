@@ -97,7 +97,7 @@ button {
 .search {
     width: 26px;
     height: 26px;
-    background-image: url('/images/Search.svg');
+    background-image: url('../images/Search.svg');
     background-color: transparent;
     background-repeat: repeat;
     background-size: cover;
@@ -112,7 +112,7 @@ button {
     padding-left: 45px;
     padding-bottom: 114px;
     color: #fff;
-    background-image: url('/images/photo-balcony.jpg');
+    background-image: url('../images/photo-balcony.jpg');
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -156,7 +156,7 @@ button {
     margin-top: 56px;
     padding-top: 468px;
     color: #fff;
-    background-image: url('/images/about.png');
+    background-image: url('../images/about.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -187,13 +187,13 @@ button {
 }
 
 .about__item:nth-child(1) {
-    background-image: url('/images/Group 1.png');
+    background-image: url('../images/Group 1.png');
     background-repeat: no-repeat;
     margin-bottom: 40px;
 }
 
 .about__item:nth-child(2) {
-    background-image: url('/images/Group2.png');
+    background-image: url('../images/Group2.png');
     background-repeat: no-repeat;
 }
 
@@ -293,11 +293,11 @@ button {
 }
 
 .faq__item:nth-child(4) {
-    padding: 22px 0 27px 0;
+    padding: 22px 0 21px 0;
 }
 
 .faq__item:nth-child(5) {
-    padding: 24px 0 35px 0;
+    padding: 27px 0 35px 0;
 }
 
 
@@ -314,7 +314,7 @@ button {
     border: none;
     border-radius: 50%;
     background-color: var(--soft-gray);
-    background-image: url('/images/Plus.svg');
+    background-image: url('../images/Plus.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -370,16 +370,16 @@ button {
 }
 
 .social__item:nth-child(1) {
- background-image: url('/images/fb.svg');
+ background-image: url('../images/fb.svg');
 }
 
 .social__item:nth-child(2) {
-    background-image: url('/images/vk.svg');
+    background-image: url('../images/vk.svg');
     
 }
 
 .social__item:nth-child(3) {
-    background-image: url('/images/instagram.svg');
+    background-image: url('../images/instagram.svg');
     
 }
 
@@ -390,7 +390,7 @@ button {
 }
 
 .footer__title {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
     color: var(--gray);
 }
 
@@ -405,13 +405,14 @@ button {
 }
 
 .footer__input:not(:last-child) {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
 .footer__input::placeholder {
     content: '';
     font-size: 16px;
     font-weight: 400;
+    letter-spacing: 0.07rem;
     color: var(--gray);
 }
 
