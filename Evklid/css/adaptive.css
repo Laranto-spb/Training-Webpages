@@ -20,7 +20,7 @@
 
     .motto__content {
         padding-top: 187px;
-        background-image: url('../images/photo-balcony 768.png');
+        background-image: url('../images/photo-balcony768.png');
         background-position-y: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -33,7 +33,7 @@
     .about__more {
         margin-top: 61px;
         padding-top: 477px;
-        background-image: url('../images/about 768.png');
+        background-image: url('../images/about768.png');
     }
 
 

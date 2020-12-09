@@ -14,7 +14,8 @@
     --bg-gray: #E5E5E5;
     --main-orange: #FF9900;
     --gray: #CACACA;
-    --soft-gray:  #ECECEC;
+    --soft-gray: #ECECEC;
+    --click-gray: #D2D2D2;
     --deep-gray: #222222;
     --input-gray: #414141;
     font-family: 'Montserrat', sans-serif;
@@ -37,6 +38,11 @@ button {
     border: none;
     font-size: 16px;
     font-weight: 700;
+    transition: background-color 0.8s;
+}
+
+.orange-btn:hover {
+    background-color: rgba(255, 153, 0, 0.6);
 }
 
 .transp-btn {
@@ -46,6 +52,11 @@ button {
     border: 2px solid var(--main-orange);
     font-size: 16px;
     font-weight: 700;
+    transition: background-color 0.8s;
+}
+
+.transp-btn:hover {
+    background-color: var(--main-orange);
 }
 
 .white-btn {
@@ -55,7 +66,15 @@ button {
     border: 2px solid var(--main-black);
     font-size: 16px;
     font-weight: 700;
+    transition: background-color 0.8s;
 }
+
+.white-btn:hover {
+    background-color: var(--main-black);
+    color: #fff;
+}
+
+
 
 .container {
     width: 1054px;
@@ -83,16 +102,36 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     height: 23px;
     width: 30px;
     cursor: pointer;
 }
 
+
 .burger>span {
     display: block;
     height: 3px;
+    width: 100%;
     background-color: var(--main-black);
+    transition: 0.8s;
 }
+
+.burger:hover > span {
+    display: block;
+    height: 3px;
+    background-color: var(--main-orange);
+}
+
+.burger:hover>.line-2 {
+    width: 70%;
+}
+
+.burger:hover>.line-3 {
+    width: 40%;
+}
+
+
 
 .search {
     width: 26px;
@@ -102,7 +141,12 @@ button {
     background-repeat: repeat;
     background-size: cover;
     border: none;
+    transition: background-image 0.8s;
 
+}
+
+.search:hover {
+    background-image: url('../images/Search__orange.svg');
 }
 
 /* Motto */
@@ -187,7 +231,7 @@ button {
 }
 
 .about__item:nth-child(1) {
-    background-image: url('../images/Group 1.png');
+    background-image: url('../images/Group1.png');
     background-repeat: no-repeat;
     margin-bottom: 40px;
 }
@@ -235,8 +279,15 @@ button {
 }
 
 .working__link {
-    color: var(--main-black)
+    color: var(--main-black);
+    transition: color 0.8s;
 }
+
+.working__link:hover {
+    color: var(--main-orange)
+}
+
+
 .working__image-small {
     display: none;
 }
@@ -245,7 +296,7 @@ button {
     margin-top: 44px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 
@@ -322,11 +373,16 @@ button {
     background-image: url('../images/Plus.svg');
     background-repeat: no-repeat;
     background-position: center;
+    transition: background-color 0.8s;
+}
+
+.faq__plus:hover {
+    background-color: var(--click-gray);
 }
 
 /* Footer */
 
-.footer  {
+.footer {
     margin-top: 57px;
 }
 
@@ -375,17 +431,17 @@ button {
 }
 
 .social__item:nth-child(1) {
- background-image: url('../images/fb.svg');
+    background-image: url('../images/fb.svg');
 }
 
 .social__item:nth-child(2) {
     background-image: url('../images/vk.svg');
-    
+
 }
 
 .social__item:nth-child(3) {
     background-image: url('../images/instagram.svg');
-    
+
 }
 
 .footer__form {
@@ -438,12 +494,37 @@ button {
 }
 
 .agree__txt {
+    position: relative;
     color: var(--gray);
+    padding-left: 20px;
 }
 
 .agree__box {
-    margin-right: 5px;
+    display: none;
 }
 
+.agree__box + span {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--gray);
+    text-align: center;
+    vertical-align: middle;
+}
 
+.agree__box + span:before {
+    content: url('../images/Checked.svg');
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
 
+}
+
+.agree__box:checked + span:before {
+        opacity: 1;
+}
