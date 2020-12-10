@@ -1,8 +1,217 @@
-@media (max-width: 768px) {
+@media (max-width: 1919px) {
+    .logo__main {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 23px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+
+    .burger>span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--main-black);
+        transition: 0.8s;
+    }
+
+    .burger:hover>span {
+        display: block;
+        height: 3px;
+        background-color: var(--main-orange);
+    }
+
+    .burger:hover>.line-2 {
+        width: 70%;
+    }
+
+    .burger:hover>.line-3 {
+        width: 40%;
+    }
+
+    .send-btn {
+        padding: 20px 34px;
+    }
+
+
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+
+    .container {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    .container-inner {
+        padding: 0 50px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__content {
+        padding: 24px 0;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .search {
+        margin-right: 0;
+    }
+
+    .motto__content {
+        padding-top: 160px;
+        padding-left: 45px;
+        padding-bottom: 114px;
+        color: #fff;
+        background-image: url('../images/photo-balcony.jpg');
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .motto__title {
+        width: 100%;
+        font-size: 60px;
+        font-weight: 800;
+    }
+
+    .motto__descr {
+        max-width: 75%;
+        margin-top: 8px;
+        margin-bottom: 108px;
+        font-size: 20px;
+    }
+
+    .about {
+        margin-top: 59px;
+
+    }
+
+    .about__descr {
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .about__cards {
+        flex-direction: column;
+        margin: 0;
+
+    }
+
+    .about__more {
+        margin-right: 0;
+        width: 100%;
+        margin-top: 56px;
+        padding-top: 468px;
+        background-image: url('../images/about.png');
+    }
+
+    .about__list {
+        margin-top: 47px;
+    }
+
+    .more__container {
+        padding: 40px 44px;
+    }
+
+
+    .more__descr {
+        max-width: 60%;
+    }
+
+    .about__item:nth-child(1) {
+        margin-bottom: 40px;
+    }
+
+
+    .about__item {
+        padding: 66px 30px 63px 348px;
+        background-position: 114px center;
+    }
+
+
+    .working {
+        margin-top: 60px;
+    }
+
+    .working__content-descr {
+        max-width: 88%;
+        margin-bottom: 27px;
+    }
+
+    .working__image-big {
+        display: none;
+    }
+
+    .working__image {
+        display: block;
+    }
+
+    .faq {
+        margin-top: 60px;
+    }
+
+    .faq__name {
+        font-size: 20px;
+    }
+
+    .faq__item {
+        padding: 38px 0;
+    }
+
+    .faq__item:nth-child(2) {
+        padding: 21px 0 26px 0;
+    }
+
+    .faq__item:nth-child(3) {
+        padding: 28px 0 34px 0;
+    }
+
+    .faq__item:nth-child(4) {
+        padding: 21px 0 24px 0;
+    }
+
+    .footer {
+        margin-top: 57px;
+    }
+
+    .footer__navigation {
+        margin-right: 0;
+    }
+
+    .footer__input {
+        width: 534px;
+    }
+
+    .footer__descr {
+        display: none;
+    }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
 
     .container {
         width: 768px;
         padding: 0;
+    }
+
+    .container-inner {
+        padding: 0 48px;
     }
 
     h2 {
@@ -10,7 +219,15 @@
     }
 
     .header__content {
-        padding: 10px 0;
+        padding: 7px 0;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .header__menu {
+        display: none;
     }
 
 
@@ -19,19 +236,33 @@
     }
 
     .motto__content {
-        padding-top: 187px;
+        padding-top: 192px;
+        padding-left: 49px;
+        padding-bottom: 115px;
         background-image: url('../images/photo-balcony768.png');
         background-position-y: bottom;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
+    .motto__title {
+        width: 100%;
+        font-size: 60px;
+    }
+
     .motto__descr {
-        max-width: 91%;
+        max-width: 92%;
+        margin-top: 10px;
+        margin-bottom: 111px;
+        font-size: 20px;
+    }
+
+    .about {
+        margin-top: 59px;
+
     }
 
     .about__more {
-        margin-top: 61px;
         padding-top: 477px;
         background-image: url('../images/about768.png');
     }
@@ -50,14 +281,36 @@
         margin-top: 40px;
     }
 
+    .about__cards {
+        flex-direction: column;
+        margin-top: 62px;
+    }
+
+    .about__more {
+        margin-right: 0;
+        width: 100%;
+    }
+
     .about__item {
         padding: 38px 30px 31px 173px;
         background-position: 23px center;
         background-size: 18%;
     }
 
+    .about__item:nth-child(1) {
+        margin-bottom: 39px;
+    }
+
+    .about__descr {
+        width: 100%;
+    }
+
     .item__descr {
         max-width: 90%;
+    }
+
+    .working {
+        margin-top: 59px;
     }
 
     .working__list {
@@ -72,7 +325,6 @@
     .working__content {
         margin-top: 37px;
         order: 2;
-
     }
 
     .working__article {
@@ -80,6 +332,10 @@
     }
 
     .working__image {
+        display: none;
+    }
+
+    .working__image-big {
         display: none;
     }
 
@@ -92,11 +348,17 @@
         max-width: 100%;
     }
 
-
-    .faq__item {
-        padding: 28px 0;
+    .faq {
+        margin-top: 59px;
     }
 
+    .faq__item {
+        padding: 30px 0;
+    }
+
+    .faq__item:nth-child(2) {
+        padding: 22px 0 22px 0;
+    }
 
     .faq__item:nth-child(3) {
         padding: 22px 0 22px 0;
@@ -111,12 +373,13 @@
     }
 
     .faq__name {
-        max-width: 78%;
+        font-size: 20px;
+        max-width: 77%;
     }
 
 
     .footer {
-        margin-top: 44px;
+        margin-top: 47px;
     }
 
     .footer__list {
@@ -141,6 +404,14 @@
 
     .footer__social {
         margin-top: 10px;
+    }
+
+    .footer__descr {
+        display: none;
+    }
+
+    .footer__input {
+        width: 534px;
     }
 
 
