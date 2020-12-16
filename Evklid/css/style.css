@@ -8,8 +8,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style-type: none;
+}
+
+a {
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 :root {
@@ -78,16 +84,14 @@ button {
     color: #fff;
 }
 
-
-
 .container {
-    width: 1920px;
-    padding: 0;
+    max-width: 1950px; 
+    padding: 0 15px;
     margin: 0 auto;
 }
 
 .container-inner {
-    padding: 0 75px;
+    padding: 0 60px;
 }
 
 .header__nav {
@@ -102,7 +106,7 @@ button {
     padding: 13px 0;
 }
 
-.right__menu {
+.side__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,9 +132,6 @@ button {
 }
 
 
-.logo {
-    display: none;
-}
 
 .burger {
     display: none;
@@ -155,9 +156,9 @@ button {
     background-image: url('../images/Search__orange.svg');
 }
 
-/* Motto */
+/* hero */
 
-.motto__content {
+.hero__content {
     padding-top: 102px;
     padding-left: 78px;
     padding-bottom: 90px;
@@ -168,13 +169,13 @@ button {
     background-size: cover;
 }
 
-.motto__title {
+.hero__title {
     width: 50%;
     font-size: 70px;
     font-weight: 800;
 }
 
-.motto__descr {
+.hero__descr {
     display: block;
     max-width: 53%;
     margin-top: 20px;
@@ -183,7 +184,7 @@ button {
     font-weight: 700;
 }
 
-.motto-btn {
+.hero-btn {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.1rem;
@@ -192,7 +193,7 @@ button {
 /* About */
 
 .about {
-    margin-top: 100px;
+    padding-top: 100px;
 
 }
 
@@ -206,14 +207,22 @@ button {
 .about__cards {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     margin-top: 40px;
 }
 
+.about__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .about__more {
+    display: flex;
+    align-items: flex-end;
     margin-right: 30px;
     width: 103%;
-    padding-top: 454px;
+    height: 627px;
     color: #fff;
     background-image: url('../images/about1920.png');
     background-repeat: no-repeat;
@@ -235,7 +244,6 @@ button {
     line-height: 2rem;
 }
 
-.about__list {}
 
 .about__item {
     border: 1px solid #CACACA;

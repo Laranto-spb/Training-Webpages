@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
 </head>
-
 <body>
     <header class="header">
         <div class="container">
             <div class="header__nav">
                 <div class="container-inner">
                     <div class="header__content">
-                        <div class="burger">
+                        <button class="burger">
                             <span class="line-1"></span>
                             <span class="line-2"></span>
                             <span class="line-3"></span>
-                        </div>
-                        <a href="" class="logo"> <img src="images/logo.png" alt="logo"></a>
-                        <a href="" class="logo__main"> <img src="images/logo1920.png" alt="logo"></a>
-                        <nav class="right__menu">
+                        </button>
+                        <a href="" class="logo"> <img src="images/header_logo.png" alt="logo"></a>
+                        <nav class="side__menu">
                             <ul class="header__menu">
                                 <li class="header__item"><a href="#" class="header__link">О нас</a></li>
                                 <li class="header__item"><a href="#" class="header__link">Проекты</a></li>
@@ -35,22 +33,25 @@
                     </div>
                 </div>
             </div>
-            <div class="motto">
-                <div class="container-inner">
-                    <div class="motto__content">
-                        <h1 class="motto__title">Проектные решения любой сложности</h1>
-                        <p class="motto__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по
-                            сей день остаются
-                            уделом проектантов</p>
-                        <button class="orange-btn motto-btn">Заказать расчёт</button>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </header>
     <main>
-        <div class="container">
-            <section class="about">
+        <section class="hero">
+            <div class="container">
+            <div class="container-inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">Проектные решения любой сложности</h1>
+                    <p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по
+                        сей день остаются
+                        уделом проектантов</p>
+                    <button class="orange-btn hero-btn">Заказать расчёт</button>
+                </div>
+            </div>                
+            </div>
+        </section>     
+        <section class="about">
+            <div class="container">
                 <div class="container-inner">
                     <div class="about__content">
                         <h2 class="about__title">O нас</h2>
@@ -93,74 +94,79 @@
 
                     </div>
                 </div>
-            </section>
-            <section class="working">
-                <div class="container-inner">
-                    <div class="working__container">
-                        <h2>Как мы работаем</h2>
-                        <ul class="working__list">
-                            <li class="working__item"><a href="" class="working__link">1 шаг</a></li>
-                            <li class="working__item"><a href="" class="working__link">2 шаг</a></li>
-                            <li class="working__item"><a href="" class="working__link">3 шаг</a></li>
-                            <li class="working__item"><a href="" class="working__link">4 шаг</a></li>
-                        </ul>
-                        <article class="working__article">
-                            <div class="working__content">
-                                <h3 class="working__content-title">Проводим консультацию</h3>
-                                <p class="working__content-descr">
-                                    Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
-                                    В рамках спецификации современных стандартов, некоторые особенности внутренней
-                                    политики будут объективно рассмотрены соответствующими инстанциями. А также
-                                    представители современных социальных резервов, инициированные исключительно
-                                    синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью
-                                    общей картины, реплицированные с зарубежных источников, современные исследования
-                                    подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить
-                                    традиционное производство, нанотехнологии освещают чрезвычайно интересные
-                                    особенности картины в целом, однако конкретные выводы, разумеется, призваны к
-                                    ответу.</p>
-                                <button class="orange-btn working-btn">Подробнее</button>
-                                <button class="white-btn">Договор</button>
-                            </div>
-                            <img src="images/Working.png" alt="hand with pencil" class="working__image">
-                            <img src="images/Working768.png" alt="hand with pencil" class="working__image-small">
-                            <img src="images/Working1920.png" alt="hand with pencil" class="working__image-big">
+            </div>
+        </section>
+        <section class="working">
+            <div class="container">
+            <div class="container-inner">
+                <div class="working__container">
+                    <h2>Как мы работаем</h2>
+                    <ul class="working__list">
+                        <li class="working__item"><a href="" class="working__link">1 шаг</a></li>
+                        <li class="working__item"><a href="" class="working__link">2 шаг</a></li>
+                        <li class="working__item"><a href="" class="working__link">3 шаг</a></li>
+                        <li class="working__item"><a href="" class="working__link">4 шаг</a></li>
+                    </ul>
+                    <article class="working__article">
+                        <div class="working__content">
+                            <h3 class="working__content-title">Проводим консультацию</h3>
+                            <p class="working__content-descr">
+                                Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями.
+                                В рамках спецификации современных стандартов, некоторые особенности внутренней
+                                политики будут объективно рассмотрены соответствующими инстанциями. А также
+                                представители современных социальных резервов, инициированные исключительно
+                                синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью
+                                общей картины, реплицированные с зарубежных источников, современные исследования
+                                подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить
+                                традиционное производство, нанотехнологии освещают чрезвычайно интересные
+                                особенности картины в целом, однако конкретные выводы, разумеется, призваны к
+                                ответу.</p>
+                            <button class="orange-btn working-btn">Подробнее</button>
+                            <button class="white-btn">Договор</button>
+                        </div>
+                        <img src="images/Working.png" alt="hand with pencil" class="working__image">
+                        <img src="images/Working768.png" alt="hand with pencil" class="working__image-small">
+                        <img src="images/Working1920.png" alt="hand with pencil" class="working__image-big">
 
-                        </article>
-                    </div>
+                    </article>
                 </div>
-            </section>
-            <section class="faq">
-                <div class="container-inner">
-                    <div class="faq__container">
-                        <h2>Часто задаваемые вопросы</h2>
-                        <ul class="faq__list">
-                            <li class="faq__item">
-                                <h3 class="faq__name">Из чего формируется конечная стоимость проекта?</h3>
-                                <button class="faq__plus"></button>
-                            </li>
-                            <li class="faq__item">
-                                <h3 class="faq__name">У меня есть свой проект. Сможем ли мы его доработать /
-                                    реализовать?</h3>
-                                <button class="faq__plus"></button>
-                            </li>
-                            <li class="faq__item">
-                                <h3 class="faq__name">Я выбираю между разными компаниями. В&nbsp;чём ваше отличие?</h3>
-                                <button class="faq__plus"></button>
-                            </li>
-                            <li class="faq__item">
-                                <h3 class="faq__name">Могу ли я делегировать вам работу / согласование с подрядчиком /
-                                    организацией? </h3>
-                                <button class="faq__plus"></button>
-                            </li>
-                            <li class="faq__item">
-                                <h3 class="faq__name">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
-                                <button class="faq__plus"></button>
-                            </li>
-                        </ul>
-                    </div>
+            </div>                
+            </div>
+
+        </section>
+        <section class="faq">
+            <div class="container">
+            <div class="container-inner">
+                <div class="faq__container">
+                    <h2>Часто задаваемые вопросы</h2>
+                    <ul class="faq__list">
+                        <li class="faq__item">
+                            <h3 class="faq__name">Из чего формируется конечная стоимость проекта?</h3>
+                            <button class="faq__plus"></button>
+                        </li>
+                        <li class="faq__item">
+                            <h3 class="faq__name">У меня есть свой проект. Сможем ли мы его доработать /
+                                реализовать?</h3>
+                            <button class="faq__plus"></button>
+                        </li>
+                        <li class="faq__item">
+                            <h3 class="faq__name">Я выбираю между разными компаниями. В&nbsp;чём ваше отличие?</h3>
+                            <button class="faq__plus"></button>
+                        </li>
+                        <li class="faq__item">
+                            <h3 class="faq__name">Могу ли я делегировать вам работу / согласование с подрядчиком /
+                                организацией? </h3>
+                            <button class="faq__plus"></button>
+                        </li>
+                        <li class="faq__item">
+                            <h3 class="faq__name">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+                            <button class="faq__plus"></button>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </div>
+            </div>                
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
