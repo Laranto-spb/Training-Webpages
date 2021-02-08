@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-    background-image: url('/images/Header.png');
+    background-image: url('images/Header.png');
     background-repeat: no-repeat;
     background-size: 781px;
     background-position-x: 84%;
@@ -93,7 +93,7 @@ body {
 
 .hero-link {
     color: var(--main-text-color);
-    background-image: url('/images/Arrow.svg');
+    background-image: url('images/Arrow.svg');
     background-repeat: no-repeat;
     background-position: right;
     padding-right: 30px;
@@ -140,7 +140,7 @@ body {
 .item-1 {
     flex-basis: 33.33%;
     background-color: #C9A3A4;
-    background-image: url('/images/Understand.png');
+    background-image: url('images/Understand.png');
     background-repeat: no-repeat;
     background-size: 56%;
     background-position-x: center;
@@ -151,7 +151,7 @@ body {
 .item-2 {
     flex-basis: 33.33%;
     background-color: #A7CEEF;
-    background-image: url('/images/Interface.png');
+    background-image: url('images/Interface.png');
     background-repeat: no-repeat;
     background-size: 56%;
     background-position-x: center;
@@ -162,7 +162,7 @@ body {
 .item-3 {
     flex-basis: 33.33%;
     background-color: #ACB5AC;
-    background-image: url('/images/Brain.png');
+    background-image: url('images/Brain.png');
     background-repeat: no-repeat;
     background-size: 56%;
     background-position-x: center;
@@ -174,7 +174,7 @@ body {
     padding-top: 451px;
     margin: 0;
     font-size: 20px;
-    background-image: url('/images/Arrow.svg');
+    background-image: url('images/Arrow.svg');
     background-repeat: no-repeat;
     background-position-x: 40px;
     background-position-y: bottom;
