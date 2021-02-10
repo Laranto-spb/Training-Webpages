@@ -92,6 +92,7 @@ button {
 }
 
 .container {
+    position: relative;
     max-width: 1800px; 
     padding: 0 15px;
     margin: 0 auto;
@@ -163,25 +164,30 @@ button {
 
 /* hero */
 
-
 .hero {
     background-image: none;
 }
 
 .hero__content {
+    position: absolute;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding-top: 102px;
-    padding-left: 80px;
-    padding-bottom: 90px;
+    padding-bottom: 0;
+    z-index: 100;
     color: #fff;
     max-width: 100%;
-    background-image: url('../images/photo-balcony1920.png');
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
+.hero__content-340 {
+    display: none;
+}
+
+
 .hero__title {
-    width: 50%;
+    max-width: 53%;
     margin: 0;
     font-size: 70px;
     font-weight: 800;
@@ -201,6 +207,41 @@ button {
     font-weight: 700;
     letter-spacing: 0.1rem;
 }
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-324 {
+    display: none;
+}
+
+.swiper-1920 {
+    height: 618px;
+}
+
+
+.slide-1 {
+    background-image: url('../images/photo-balcony1920.png');
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-2 {
+    background-image: url('../images/hero_2.png');
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.slide-3 {
+    background-image: url('../images/hero_3.png');
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* About */
 

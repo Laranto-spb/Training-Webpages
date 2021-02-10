@@ -1,5 +1,4 @@
 @media (max-width: 1024px) {
-
   .header__menu {
     display: none;
   }
@@ -77,20 +76,29 @@
   }
 
   .hero__content {
-    padding-top: 160px;
-    padding-left: 45px;
-    padding-bottom: 114px;
-    padding-right: 15px;
+    position: absolute;
+    top: 158px;
+    left: 95px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     color: #fff;
-    background-image: url('../images/photo-balcony.jpg');
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
 
+  .hero__content-340 {
+    display: none;
+  }
+
+  .swiper-1920 {
+    height: 665px;
+  }
+
+  .swiper-340 {
+    display: none;
   }
 
   .hero__title {
-    width: 100%;
+    max-width: 96%;
     font-size: 60px;
     font-weight: 800;
   }
@@ -243,6 +251,16 @@
 
 @media (max-width: 887px) {
 
+  .container-1920 {
+    display: none;
+  }
+
+  .swiper-340 {
+    display: block;
+    height: 700px;
+  }
+
+
   .container {
     max-width: 700px;
     padding: 0 15px;
@@ -269,11 +287,16 @@
     display: none;
   }
 
+  .hero__content-340 {
+    display: block;
+  }
+
   .hero__content {
-    padding-top: 192px;
-    padding-left: 0;
-    padding-bottom: 115px;
-    padding-right: 0;
+    left: 47px;
+    top: 259px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     background-image: none;
   }
 
@@ -286,7 +309,7 @@
   }
 
   .hero__title {
-    width: 104%;
+    max-width: 100%;
     font-size: 60px;
   }
 
@@ -468,12 +491,14 @@
   .working__image {
     max-width: 100%;
   }
+
 }
 
 
 @media (max-width: 740px) {
 
   .container {
+    position: static;
     max-width: 700px;
     padding: 0 15px;
     margin: 0 auto;
@@ -505,19 +530,26 @@
 
   /* Hero block */
 
+  .swiper-340 {
+    height: 248px;
+  }
+
   .hero {
+    position: relative;
     background-image: none;
   }
 
   .hero__content {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
     padding-left: 14px;
     padding-right: 14px;
-    padding-bottom: 43px;
-    background-image: url(../images/photo-balcony320.jpg);
+    padding-bottom: 0;
   }
 
   .hero__title {
@@ -819,5 +851,3 @@
   }
 
 }
-
-

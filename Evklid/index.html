@@ -7,6 +7,12 @@
   <title>Evklid main page</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/adaptive.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script defer src="script.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -34,13 +40,40 @@
   </header>
   <main>
     <section class="hero">
-      <div class="container">
+      <!-- Swiper for 340px -->
+      <div class="hero__content hero__content-340">  
+        <h1 class="hero__title">Проектные решения любой сложности</h1>
+        <p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по
+          сей день остаются
+          уделом проектантов
+        </p>
+        <button class="orange-btn hero-btn">Заказать расчёт</button>
+      </div>
+      <div class="swiper-container swiper-340">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1"></div>
+          <div class="swiper-slide slide-2"></div>
+          <div class="swiper-slide slide-3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Swiper for 1920px -->
+      <div class="container container-1920">
         <div class="hero__content">
           <h1 class="hero__title">Проектные решения любой сложности</h1>
           <p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по
             сей день остаются
-            уделом проектантов</p>
+            уделом проектантов
+          </p>
           <button class="orange-btn hero-btn">Заказать расчёт</button>
+        </div>
+        <div class="swiper-container swiper-1920">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1"></div>
+            <div class="swiper-slide slide-2"></div>
+            <div class="swiper-slide slide-3"></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -116,7 +149,7 @@
             </div>
             <picture>
               <source srcset="images/Working320.png" media="(max-width: 484px)">
-              <source srcset="images/Working768.png" media="(max-width: 887px)">                
+              <source srcset="images/Working768.png" media="(max-width: 887px)">
               <source srcset="images/Working.png" media="(max-width: 1800px)">
               <img src="images/Working1920.png" alt="hand with pencil" class="working__image">
             </picture>
