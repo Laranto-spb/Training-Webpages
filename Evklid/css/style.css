@@ -361,6 +361,12 @@ button {
     padding-top: 100px;
 }
 
+.working-picture {
+    width: 870px;
+    height: 465px;
+}
+
+
 .working__title {
     font-size: 48px;
     font-weight: 400;
@@ -384,6 +390,9 @@ button {
 }
 
 .working__link {
+    border: none;
+    background: transparent;
+    cursor: pointer;
     color: var(--main-black);
     transition: color 0.8s;
 }
@@ -392,13 +401,20 @@ button {
     color: var(--main-orange)
 }
 
+.working__link-active {
+    color: var(--main-orange)
+}
 
 .working__more {
+    display: none;
+}
+
+
+.working__more-active {
     margin-top: 44px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-
+    align-items: flex-start;
 }
 
 

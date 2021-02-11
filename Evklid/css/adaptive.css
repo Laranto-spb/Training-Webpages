@@ -174,10 +174,17 @@
     padding-top: 60px;
   }
 
-  /* .working-picture {
+  .working-picture {
   width: 437px;
-  height: 689px;    
-  } */
+  height: 689px; 
+  object-fit: cover;  
+  }
+
+  .working__image {
+    width: 437px;
+    height: 100% 
+  }
+
 
 
 
@@ -390,6 +397,12 @@
 
   .working {
     padding-top: 22px;
+  }
+
+  .working-picture {
+    width: 668px;
+    height: 284px;
+    object-fit: cover;
   }
 
   .working__list {
@@ -692,6 +705,7 @@
   .working-picture {
     width: 290px;
     height: 160px;
+    object-fit: cover;
   }
 
   .working__title {

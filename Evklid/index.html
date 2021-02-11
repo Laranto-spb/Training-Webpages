@@ -41,7 +41,7 @@
   <main>
     <section class="hero">
       <!-- Swiper for 768px -->
-      <div class="hero__content hero__content-340">  
+      <div class="hero__content hero__content-340">
         <h1 class="hero__title">Проектные решения любой сложности</h1>
         <p class="hero__descr">Есть над чем задуматься: базовые сценарии поведения пользователей и по
           сей день остаются
@@ -125,12 +125,12 @@
         <div class="working__container">
           <h2 class="working__title">Как мы работаем</h2>
           <ul class="working__list">
-            <li class="working__item"><a href="" class="working__link">1 шаг</a></li>
-            <li class="working__item"><a href="" class="working__link">2 шаг</a></li>
-            <li class="working__item"><a href="" class="working__link">3 шаг</a></li>
-            <li class="working__item"><a href="" class="working__link">4 шаг</a></li>
+            <li class="working__item"><button class="working__link working__link-active tabs-btn" data-path="one">1 шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="two">2 шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="three">3 шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="four">4 шаг</button></li>
           </ul>
-          <div class="working__more">
+          <div class="working__more working__more-active" data-target="one">
             <div class="working__content">
               <h3 class="working__content-title">Проводим консультацию</h3>
               <p class="working__content-descr">
@@ -152,6 +152,66 @@
               <source srcset="images/Working768.png" media="(max-width: 887px)">
               <source srcset="images/Working.png" media="(max-width: 1800px)">
               <img src="images/Working1920.png" alt="hand with pencil" class="working__image">
+            </picture>
+          </div>
+          <div class="working__more" data-target="two">
+            <div class="working__content">
+              <h3 class="working__content-title">Составляем смету</h3>
+              <p class="working__content-descr">
+                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных
+                стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
+                инстанциями. А также представители современных социальных резервов, инициированные исключительно
+                синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины,
+                реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых
+                исследований.</p>
+              <button class="orange-btn working-btn">Подробнее</button>
+              <button class="white-btn">Договор</button>
+            </div>
+            <picture class="working-picture">
+              <source srcset="images/Working_2.png" media="(max-width: 484px)">
+              <source srcset="images/Working_2.png" media="(max-width: 887px)">
+              <source srcset="images/Working_2.png" media="(max-width: 1800px)">
+              <img src="images/Working_2.png" alt="hand with pencil" class="working__image">
+            </picture>
+          </div>
+          <div class="working__more" data-target="three">
+            <div class="working__content">
+              <h3 class="working__content-title">Привлекаем подрядчиков</h3>
+              <p class="working__content-descr">
+                Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа
+                прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории
+                является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую
+                зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель
+                организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание
+                показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности
+                позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
+              <button class="orange-btn working-btn">Подробнее</button>
+              <button class="white-btn">Договор</button>
+            </div>
+            <picture class="working-picture">
+              <source srcset="images/Working_3.png" media="(max-width: 484px)">
+              <source srcset="images/Working_3.png" media="(max-width: 887px)">
+              <source srcset="images/Working_3.png" media="(max-width: 1800px)">
+              <img src="images/Working_3.png" alt="hand with pencil" class="working__image">
+            </picture>
+          </div>
+          <div class="working__more" data-target="four">
+            <div class="working__content">
+              <h3 class="working__content-title">Инспектируем все этапы работ</h3>
+              <p class="working__content-descr">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития.
+                Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о
+                возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное
+                информационно-пропагандистское обеспечение нашей деятельности позволяе</p>
+              <button class="orange-btn working-btn">Подробнее</button>
+              <button class="white-btn">Договор</button>
+            </div>
+            <picture class="working-picture">
+              <source srcset="images/Working_4.png" media="(max-width: 484px)">
+              <source srcset="images/Working_4.png" media="(max-width: 887px)">
+              <source srcset="images/Working_4.png" media="(max-width: 1800px)">
+              <img src="images/Working_4.png" alt="hand with pencil" class="working__image">
             </picture>
           </div>
         </div>
