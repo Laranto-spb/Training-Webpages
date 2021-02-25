@@ -9,12 +9,50 @@
 
   .logo {
     display: block;
-
   }
 
   .logo>img {
     width: 150px;
     height: 48px;
+  }
+
+  .burger__menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: -100%;
+    width: 42%;
+    padding-top: 733px;
+    padding-left: 79px;
+    padding-bottom: 111px;
+    z-index: 200;
+    background-color: #fff;
+    transition: left 1s ease-in-out, right 1s ease-in-out;
+
+  }
+
+  .burger__menu.active {
+    left: -10px;
+    right: auto;
+  }
+
+  .burger__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .burger__item {
+    margin: 0;
+  }
+
+  .burger__item:not(:last-child) {
+    margin-bottom: 67px;
+  }
+
+  .burger__link {
+    font-size: 24px;
+    color: var(--main-black);
+    font-weight: 700;
   }
 
   .burger {
@@ -28,6 +66,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 300;
   }
 
 
@@ -39,20 +78,40 @@
     transition: 0.8s;
   }
 
+  .line-1,
+  .line-2,
+  .line-3 {
+    transition: transform 0.8s;
+  }
+
+  .line-1.active {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .line-2.active {
+    display: none;
+  }
+
+  .line-3.active {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+
   .burger:hover>span {
-    display: block;
-    height: 3px;
     background-color: var(--main-orange);
   }
 
-  .burger:hover>.line-2 {
+  .burger:hover>.line-2.lock {
     width: 70%;
   }
 
-  .burger:hover>.line-3 {
+  .burger:hover>.line-3.lock {
     width: 40%;
   }
 
+  .body.lock {
+    overflow: hidden;
+  }
 }
 
 
@@ -83,6 +142,7 @@
     padding-left: 10px;
     padding-right: 10px;
     color: #fff;
+    z-index: 100;
   }
 
   .hero__content-340 {
@@ -169,24 +229,20 @@
     background-position: 114px center;
   }
 
-
   .working {
     padding-top: 60px;
   }
 
   .working-picture {
-  width: 437px;
-  height: 689px; 
-  object-fit: cover;  
+    width: 437px;
+    height: 689px;
+    object-fit: cover;
   }
 
   .working__image {
     width: 437px;
-    height: 100% 
+    height: 100%
   }
-
-
-
 
   .working__more {
     margin-top: 48px;
@@ -201,27 +257,42 @@
 
   .faq {
     padding-top: 57px;
-    padding-bottom: 40px;
-  }
-
-  .faq__name {
-    font-size: 20px;
+    padding-bottom: 55px;
   }
 
   .faq__item {
-    padding: 38px 0;
+    padding: 35px 0 37px 0 !important;
+  }
+
+  .faq__name {
+    font-size: 20px !important;
+    padding-left: 0 !important;
+    width: 85%;
+  }
+
+  .faq__title {
+    padding: 0 !important;
+  }
+
+  .faq__title>span {
+    width: 50px !important;
+    height: 50px !important;
   }
 
   .faq__item:nth-child(2) {
-    padding: 21px 0 26px 0;
+    padding: 18px 0 25px 0 !important;
   }
 
   .faq__item:nth-child(3) {
-    padding: 28px 0 34px 0;
+    padding: 28px 0 38px 0 !important;
   }
 
   .faq__item:nth-child(4) {
-    padding: 21px 0 24px 0;
+    padding: 18px 0 24px 0 !important;
+  }
+
+  .faq__item:nth-child(5) {
+    padding: 28px 0 37px 0 !important;
   }
 
   .footer {
@@ -269,11 +340,19 @@
     display: none;
   }
 
+  .burger__menu {
+    padding-top: 766px;
+    padding-left: 111px;
+  }
+
+  .burger__menu.active {
+    left: -24px;
+  }
+
   .swiper-340 {
     display: block;
     height: 700px;
   }
-
 
   .container {
     max-width: 700px;
@@ -431,32 +510,41 @@
 
   .faq {
     padding-top: 59px;
-    padding-bottom: 25px;
+    padding-bottom: 57px;
   }
 
   .faq__item {
-    padding: 30px 0;
+    padding: 29px 0 22px 0 !important;
   }
 
   .faq__item:nth-child(2) {
-    padding: 22px 0 22px 0;
+    padding: 21px 0 25px 0 !important;
   }
 
   .faq__item:nth-child(3) {
-    padding: 22px 0 22px 0;
-  }
-
-  .faq__item:nth-child(4) {
-    padding: 22px 0 21px 0;
+    padding: 20px 0 24px 0 !important;
   }
 
   .faq__item:nth-child(5) {
-    padding: 25px 0 35px 0;
+    padding: 20px 0 24px 0 !important;
   }
 
   .faq__name {
-    font-size: 20px;
-    max-width: 77%;
+    max-width: 79%;
+
+  }
+
+  .faq__title>span {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .faq__title>span::before {
+    width: 31px;
+  }
+
+  .faq__title>span::after {
+    height: 31px;
   }
 
 
@@ -548,6 +636,35 @@
     order: 2;
   }
 
+  .burger__menu {
+    width: 200px;
+    left: 100%;
+    padding-top: 330px;
+    padding-left: 60px;
+    padding-bottom: 75px;
+  }
+
+  .burger__menu.active {
+    left: auto;
+    right: 0;
+  }
+
+  .burger__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  .burger__link {
+    font-size: 16px;
+  }
+
+  .line-1.active {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .line-3.active {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
 
   /* Hero block */
 
@@ -556,6 +673,7 @@
     position: relative;
     background-image: none;
   }
+
   .swiper-340 {
     display: none;
   }
@@ -563,7 +681,7 @@
   .hero__content-340 {
     display: none;
   }
-  
+
   .swiper-1920 {
     height: 263px;
   }
@@ -580,8 +698,8 @@
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 0;
   }
 
@@ -757,12 +875,13 @@
 
   .faq {
     padding-top: 37px;
-    padding-bottom: 23px;
+    padding-bottom: 37px;
   }
 
-  .faq__title {
+  .faq__container-title {
     font-size: 24px;
     letter-spacing: 0;
+    margin-bottom: 15px;
   }
 
   .faq__list {
@@ -770,50 +889,50 @@
   }
 
   .faq__item {
-    padding: 19px 0;
+    position: relative !important;
+    padding: 19px 0 !important;
   }
 
   .faq__item:nth-child(2) {
-    padding: 19px 0 21px 0;
+    padding: 19px 0 21px 0 !important;
   }
 
   .faq__item:nth-child(3) {
-    padding: 18px 0 19px 0;
+    padding: 18px 0 19px 0 !important;
   }
 
   .faq__item:nth-child(4) {
-    padding: 19px 0 18px 0;
+    padding: 19px 0 18px 0 !important;
   }
 
-  .faq__item:nth-child(4)>.faq__name {
+  /* .faq__item:nth-child(4)>.faq__name {
     max-width: 82%;
-  }
+  } */
 
   .faq__item:nth-child(5) {
-    padding: 19px 0 21px 0;
+    padding: 19px 0 21px 0 !important;
   }
+
 
   .faq__name {
-    max-width: 76%;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 26px;
+    max-width: 81%;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 25px !important;
+    padding-left: 0 !important;
   }
 
-  .faq__plus {
-    width: 30px;
-    height: 30px;
+  .faq__title>span {
+    width: 30px !important;
+    height: 30px !important;
   }
 
-  .faq__plus::before {
-    content: "";
-    width: 15px;
-
+  .faq__title>span::before {
+    width: 18px;
   }
 
-  .faq__plus::after {
-    content: "";
-    height: 15px;
+  .faq__title>span::after {
+    height: 18px;
   }
 
   /* Footer */

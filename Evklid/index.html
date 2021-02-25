@@ -13,27 +13,46 @@
   <script defer src="script.js"></script>
   <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#accordion").accordion();
+    });
+
+  </script>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <div class="container">
       <div class="header__content">
-        <button class="burger">
-          <span class="line-1"></span>
-          <span class="line-2"></span>
-          <span class="line-3"></span>
+        <button class="burger" aria-label="burger menu">
+          <span class="line-1 lock"></span>
+          <span class="line-2 lock"></span>
+          <span class="line-3 lock"></span>
         </button>
         <a href="" class="logo"> <img src="images/header_logo.png" alt="logo"></a>
         <nav class="side__menu">
           <ul class="header__menu">
-            <li class="header__item"><a href="#" class="header__link">О нас</a></li>
-            <li class="header__item"><a href="#" class="header__link">Проекты</a></li>
-            <li class="header__item"><a href="#" class="header__link">Этапы</a></li>
-            <li class="header__item"><a href="#" class="header__link">Отзывы</a></li>
-            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+            <li class="header__item"><a href="#about" class="header__link" aria-label="About us link">О нас</a></li>
+            <li class="header__item"><a href="#working" class="header__link" aria-label="Projects link">Проекты</a></li>
+            <li class="header__item"><a href="#" class="header__link" aria-label="Stages link">Этапы</a></li>
+            <li class="header__item"><a href="#" class="header__link" aria-label="Reviews link">Отзывы</a></li>
+            <li class="header__item"><a href="#footer" class="header__link" aria-label="Contacts link">Контакты</a></li>
           </ul>
           <button class="search"></button>
+        </nav>
+        <nav class="burger__menu">
+          <ul class="burger__list">
+            <li class="burger__item"><a href="#about" class="burger__link">О нас</a></li>
+            <li class="burger__item"><a href="#working" class="burger__link">Проекты</a></li>
+            <li class="burger__item"><a href="#" class="burger__link">Этапы</a></li>
+            <li class="burger__item"><a href="#" class="burger__link">Отзывы</a></li>
+            <li class="burger__item"><a href="#footer" class="burger__link">Контакты</a></li>
+          </ul>
         </nav>
       </div>
     </div>
@@ -77,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__content">
           <h2 class="about__title">O нас</h2>
@@ -120,15 +139,16 @@
         </div>
       </div>
     </section>
-    <section class="working">
+    <section class="working" id="working">
       <div class="container">
         <div class="working__container">
           <h2 class="working__title">Как мы работаем</h2>
           <ul class="working__list">
-            <li class="working__item"><button class="working__link working__link-active tabs-btn" data-path="one">1 шаг</button></li>
-            <li class="working__item"><button class="working__link tabs-btn" data-path="two">2 шаг</button></li>
-            <li class="working__item"><button class="working__link tabs-btn" data-path="three">3 шаг</button></li>
-            <li class="working__item"><button class="working__link tabs-btn" data-path="four">4 шаг</button></li>
+            <li class="working__item"><button class="working__link working__link-active tabs-btn" data-path="one" aria-label="Stage 1">1
+                шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="two" aria-label="Stage 2">2 шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="three" aria-label="Stage 3">3 шаг</button></li>
+            <li class="working__item"><button class="working__link tabs-btn" data-path="four" aria-label="Stage 4">4 шаг</button></li>
           </ul>
           <div class="working__more working__more-active" data-target="one">
             <div class="working__content">
@@ -218,51 +238,71 @@
       </div>
 
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
         <div class="faq__container">
-          <h2 class="faq__title">Часто задаваемые вопросы</h2>
-          <ul class="faq__list">
+          <h2 class="faq__container-title">Часто задаваемые вопросы</h2>
+          <ul class="faq__list" id="accordion">
             <li class="faq__item">
-              <h3 class="faq__name">Из чего формируется конечная стоимость проекта?</h3>
-              <span class="faq__plus"></span>
+              <div class="faq__title">
+                <h3 class="faq__name">Из чего формируется конечная стоимость проекта?</h3>
+              </div>
+              <p class="faq__descr">Являясь всего лишь частью общей картины, непосредственные участники технического
+                прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно
+                верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой
+                яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими
+                общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации
+                призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль
+                ключевых факторов.
+              </p>
             </li>
             <li class="faq__item">
-              <h3 class="faq__name">У меня есть свой проект. Сможем ли мы его доработать /
-                реализовать?</h3>
-              <span class="faq__plus"></span>
+              <div class="faq__title">
+                <h3 class="faq__name">У меня есть свой проект. Сможем ли мы его доработать /
+                  реализовать?</h3>
+              </div>
+              <p class="faq__descr"> Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут
+                быть призваны к
+                ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев
+                населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые
+                выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
+                должны быть представлены в исключительно положительном свете.</p>
             </li>
             <li class="faq__item">
-              <h3 class="faq__name">Я выбираю между разными компаниями. В&nbsp;чём ваше отличие?</h3>
-              <span class="faq__plus"></span>
+              <div class="faq__title">
+                <h3 class="faq__name">Я выбираю между разными компаниями. В&nbsp;чём ваше отличие?</h3>
+              </div>
             </li>
             <li class="faq__item">
-              <h3 class="faq__name">Могу ли я делегировать вам работу / согласование с подрядчиком /
-                организацией? </h3>
-              <span class="faq__plus"></span>
+              <div class="faq__title">
+                <h3 class="faq__name">Могу ли я делегировать вам работу / согласование с подрядчиком /
+                  организацией? </h3>
+              </div>
             </li>
             <li class="faq__item">
-              <h3 class="faq__name">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
-              <span class="faq__plus"></span>
+              <div class="faq__title">
+                <h3 class="faq__name">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__content">
         <nav class="footer__navigation">
           <a href="#" class="footer__logo"><img src="images/Light_logo.png" alt="Logo"></a>
           <ul class="footer__list">
-            <li class="footer__item"><a href="" class="footer__link">О нас</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Проекты</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Отзывы</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Договор оферты</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Договор подряда</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Конфиденциальность</a></li>
-            <li class="footer__item"><a href="" class="footer__link">Партнерское соглашение</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="About us link">О нас</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Projects link">Проекты</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Reviews link">Отзывы</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Offer contract link">Договор оферты</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Usual contract link">Договор подряда</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Confidential">Конфиденциальность</a></li>
+            <li class="footer__item"><a href="" class="footer__link" aria-label="Partner agreement">Партнерское соглашение</a></li>
           </ul>
           <ul class="footer__social">
             <li class="social__item"><a href="" class="social__link facebook__link"></a></li>
