@@ -39,6 +39,47 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+  //Burger 
+
+  const burgerBtn = document.querySelector('.burger');
+  const burgerMenu = document.querySelector('.burger__menu');
+  const body = document.querySelector('.body');
+  
+  burgerBtn.addEventListener('click', function () {
+
+    burgerMenu.classList.toggle('active');
+    body.classList.toggle('lock');
+    
+    document.querySelector('.line-1').classList.toggle('active')
+
+    document.querySelector('.line-2').classList.toggle('active')
+    document.querySelector('.line-2').classList.toggle('lock')
+
+    document.querySelector('.line-3').classList.toggle('active')
+    document.querySelector('.line-3').classList.toggle('lock')
+
+  })
+
+  const burgerLink = document.querySelectorAll('.burger__link');
+
+  burgerLink.forEach(function (el) {
+    el.addEventListener('click', function () {
+      body.classList.remove('lock');
+      burgerMenu.classList.remove('active');
+
+      document.querySelector('.line-1').classList.remove('active')
+      document.querySelector('.line-1').classList.add('lock')
+
+      document.querySelector('.line-2').classList.remove('active')
+      document.querySelector('.line-2').classList.add('lock')
+
+      document.querySelector('.line-3').classList.remove('active')
+      document.querySelector('.line-3').classList.add('lock')
+    })
+  })
+
+  
+
 
 
 })
