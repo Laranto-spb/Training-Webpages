@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page about Baikal, discover">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/adaptive.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -32,6 +34,11 @@
             aria-label="baikalholiday@mail.ru">baikalholiday@mail.ru</a>
           <button class="header-content__btn trans-btn reset-btn" aria-label="Обратный звонок">Обратный звонок</button>
         </div>
+        <button class="header-burger reset-btn">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+        </button>
       </div>
     </section>
     <section class="header-menu">
@@ -88,7 +95,7 @@
           <li class="directions-content__item cruises">Круизы и прогулки по Байкалу на теплоходах и катерах</li>
           <li class="directions-content__item fishing">Профессиональная организация охоты и рыбалки на Байкале</li>
           <li class="directions-content__item rent">Аренда автотранспорта для экскурсий и пассажирских перевозок</li>
-          <li class="directions-content__item booking">Бронирование гостиниц в городе Улан-Удэ и на Байкале</li>
+          <li class="directions-content__item bookings">Бронирование гостиниц в городе Улан-Удэ и на Байкале</li>
           <li class="directions-content__item vip">Организация индивидуальных туров и VIP-туров на Байкале</li>
         </ul>
       </div>
@@ -161,36 +168,30 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-
-        <div class="swiper-container">
-
+        <div class="swiper-container mobile-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide gallery-slide">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/2.jpg" alt="2">
-              <img src="assets/gallery_slides/3.jpg" alt="3">
-              <img src="assets/gallery_slides/4.jpg" alt="4">
-              <img src="assets/gallery_slides/5.jpg" alt="5">
-              <img src="assets/gallery_slides/6.jpg" alt="6">
-            </div>
-            <div class="swiper-slide gallery-slide">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-            </div>
-            <div class="swiper-slide gallery-slide">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-              <img src="assets/gallery_slides/1.jpg" alt="1">
-            </div>
+            <img class="swiper-slide" src="assets/gallery_slides/1.jpg" alt="1">
+            <img class="swiper-slide" src="assets/gallery_slides/2.jpg" alt="2">
+            <img class="swiper-slide" src="assets/gallery_slides/3.jpg" alt="3">
+            <img class="swiper-slide" src="assets/gallery_slides/4.jpg" alt="4">
+            <img class="swiper-slide" src="assets/gallery_slides/5.jpg" alt="5">
+            <img class="swiper-slide" src="assets/gallery_slides/6.jpg" alt="6">
           </div>
         </div>
+
+
+        <div class="swiper-container general-swiper">
+
+          <div class="swiper-wrapper">
+            <img class="swiper-slide" src="assets/gallery_slides/1.jpg" alt="1">
+            <img class="swiper-slide" src="assets/gallery_slides/2.jpg" alt="2">
+            <img class="swiper-slide" src="assets/gallery_slides/3.jpg" alt="3">
+            <img class="swiper-slide" src="assets/gallery_slides/4.jpg" alt="4">
+            <img class="swiper-slide" src="assets/gallery_slides/5.jpg" alt="5">
+            <img class="swiper-slide" src="assets/gallery_slides/6.jpg" alt="6">
+          </div>
+        </div>
+        <a href="#" class="all-pics__mobile">Перейти в раздел</a>
       </div>
     </section>
     <section class="general">
@@ -256,15 +257,23 @@
       <div class="container booking-content">
         <h2 class="booking-content__title">Забронируйте отдых на Байкале</h2>
         <form class="booking-content__form">
-          <label><input class="booking-input" type="text" placeholder="Ваше имя" name="userName"></label>
-          <label><input class="booking-input" type="tel" placeholder="Телефон" name="userTel"></label>
-          <label><input class="booking-input" type="email" placeholder="E-mail" name="userEmail"></label>
-          <label><input class="booking-input" type="text" placeholder="Местность Байкала" name="place"></label>
-          <label><input class="booking-input" type="text" placeholder="Количество взрослых" name="adultCount"></label>
-          <label><input class="booking-input" type="number" placeholder="Количество детей" name="childrenCount"></label>
-          <label><input class="booking-input" type="date" placeholder="Дата заезда" name="arrivalDate"></label>
-          <label><input class="booking-input" type="date" placeholder="Дата отъезда" name="departureDate"></label>
-          <textarea class="booking-input" type="text" placeholder="Комментарий" name="comments"></textarea>
+          <label class="booking-label"><input class="booking-input" type="text" placeholder="Ваше имя"
+              name="userName"></label>
+          <label class="booking-label"><input class="booking-input" type="tel" placeholder="Телефон"
+              name="userTel"></label>
+          <label class="booking-label"><input class="booking-input" type="email" placeholder="E-mail"
+              name="userEmail"></label>
+          <label class="booking-label"><input class="booking-input" type="text" placeholder="Местность Байкала"
+              name="place"></label>
+          <label class="booking-label"><input class="booking-input" type="text" placeholder="Количество взрослых"
+              name="adultCount"></label>
+          <label class="booking-label"><input class="booking-input" type="number" placeholder="Количество детей"
+              name="childrenCount"></label>
+          <label class="booking-label label-adult"><input class="booking-input" type="date" placeholder="Дата заезда"
+              name="arrivalDate"></label>
+          <label class="booking-label label-children"><input class="booking-input" type="date"
+              placeholder="Дата отъезда" name="departureDate"></label>
+          <textarea class="booking-input" placeholder="Комментарий" name="comments"></textarea>
           <button class="booking-btn reset-btn">Отправить заявку</button>
           <label class="booking-check"><input type="checkbox" name="Agreemnt">Согласие на обработку персональных
             данных</label>
@@ -275,6 +284,19 @@
   </main>
   <footer class="footer">
     <div class="container">
+      <section class="mobile-menu">
+        <div class="burger-container">
+          <button class="footer-burger reset-btn">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+            <span class="line-3"></span>
+          </button>
+          <span>Меню</span>
+        </div>
+        <a href="tel:89243541540" class="footer-content__phone" aria-label="89243541540">8-924-3-541-540</a>
+        <a href="mailto:baikalholiday@mail.ru" class="footer-content__mail"
+          aria-label="baikalholiday@mail.ru">baikalholiday@mail.ru</a>
+      </section>
       <section class="footer-menu">
         <ul class="menu-list reset-list">
           <li class="menu-list__item">
@@ -327,7 +349,8 @@
             <p class="contact-info__name">Заказ туров и бронирование:</p>
             <ul class="contact-info__list reset-list">
               <li class="contact-info__item"><a href="tel:89243541540">тел. 8-924-3-541-540</a></li>
-              <li class="contact-info__item"><a href="mailto:baikalholiday@mail.ru">e-mail: baikalholiday@mail.ru</a></li>
+              <li class="contact-info__item"><a href="mailto:baikalholiday@mail.ru">e-mail: baikalholiday@mail.ru</a>
+              </li>
             </ul>
           </div>
           <div class="contact-info__adress">
@@ -342,4 +365,5 @@
     </div>
   </footer>
 </body>
+
 </html>

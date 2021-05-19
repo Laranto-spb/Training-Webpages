@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
-@mixin proportions($width, $height) {
-  width: $width;
-  height: $height;
-}
+@import "_mixins";
 
 * {
   box-sizing: border-box;
@@ -42,6 +39,13 @@ $gradient: linear-gradient(180deg, #000000 0%, #FFFFFF 48.44%, #FFFFFF 76.04%, #
   color: $white;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 22px;
+  transition: 0.6s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 
@@ -55,9 +59,25 @@ body {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
+
+  @include small-desctop {
+    max-width: 1054px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  @include tablet {
+    max-width: 740px;
+    padding: 0 32px;
+  }
+
+  @include phone {
+    max-width: none;
+    padding: 0 18px;
+  }
 }
 
 .first-header {
@@ -72,6 +92,35 @@ body {
   padding-top: 14px;
   padding-bottom: 14px;
   color: $white;
+
+  @include small-desctop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @include tablet {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .header-burger {
+    display: none;
+
+    @include ipad {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+      background-color: transparent;
+      @include proportions (32px, 24px);
+
+      span {
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+      }
+    }
+  }
 }
 
 .header-content__logo {
@@ -82,15 +131,24 @@ body {
   background-size: contain;
   background-position: left center;
 
+  @include phone {
+    height: 40px;
+    padding-left: 52px;
+  }
+
   span {
     display: block;
 
     &:nth-child(1) {
       font-size: 20px;
+
+      @include phone {
+        font-size: 16px;
+      }
     }
 
     &:nth-child(2) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
 }
@@ -110,23 +168,41 @@ body {
   .header-content__phone {
     background-image: url(../assets/phone.svg);
     margin-right: 33px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .header-content__mail {
     background-image: url(../assets/mail.svg);
     margin-right: 45px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .header-content__btn {
-    @include proportions(186px, 44px)
+    @include proportions(186px, 44px);
+
+    @include ipad {
+      display: none;
+    }
   }
 }
 
 .header-menu {
   padding-top: 20px;
+
+  @include phone {
+    display: none;
+  }
 }
 
 .header-menu__nav {
+
+
   a {
     text-decoration: none;
     color: $white;
@@ -140,10 +216,21 @@ body {
   }
 
   .header-menu__item {
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.6s;
+
     &:not(:last-child) {
       margin-right: 32px;
     }
+
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
   }
+
+
 }
 
 // HERO
@@ -151,10 +238,29 @@ body {
 .hero {
   padding-top: 110px;
   padding-bottom: 257px;
+
+  @include small-desctop {
+    padding-top: 95px;
+  }
+
+  @include tablet {
+    padding-top: 33px;
+    padding-bottom: 135px;
+  }
+
+  @include phone {
+    padding-bottom: 104px;
+  }
+
+
 }
 
 .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   color: $white;
+
 
   .hero-content__title {
     margin: 0;
@@ -164,6 +270,25 @@ body {
     font-size: 90px;
     font-weight: 700;
     line-height: 7.2rem;
+
+    @include small-desctop {
+      max-width: 52%;
+      margin-bottom: 24px;
+    }
+
+    @include tablet {
+      margin-bottom: 14px;
+      max-width: 60%;
+      font-size: 64px;
+      line-height: 83.2px;
+    }
+
+    @include phone {
+      max-width: 80%;
+      margin-bottom: 9px;
+      font-size: 40px;
+      line-height: 1.5;
+    }
   }
 
   .hero-content__desc {
@@ -173,6 +298,19 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.7rem;
+
+    @include tablet {
+      max-width: 60%;
+      margin-bottom: 42px;
+      font-size: 18px;
+    }
+
+    @include phone {
+      max-width: none;
+      margin-bottom: 36px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
   }
 
   .hero-content__btn {
@@ -181,7 +319,14 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 30px;
+
+    @include phone {
+      @include proportions(226px, 48px);
+      align-self: center;
+    }
   }
+
+
 }
 
 // Choice
@@ -190,6 +335,11 @@ body {
   padding-top: 64px;
   padding-bottom: 64px;
   background-color: $white;
+
+  @include phone {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .choice-list {
@@ -200,6 +350,22 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 
+  @include small-desctop {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include phone {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: auto;
+    gap: 16px;
+  }
+
   .choice-list__item {
     position: relative;
     @include proportions(256px, 200px);
@@ -209,6 +375,22 @@ body {
     font-weight: 500;
     border: 1px solid #D9D9DE;
     border-radius: 6px;
+
+    @include small-desctop {
+      width: 100%;
+      height: 250px;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: 228px;
+      background-size: 100% 73%;
+    }
+
+    @include phone {
+      width: 100%;
+      height: 225px;
+    }
 
     .choice-list__link {
       position: absolute;
@@ -221,6 +403,14 @@ body {
       text-decoration: none;
       color: $black;
       transition: color 0.6s;
+
+      @include small-desctop {
+        padding-top: 213px;
+      }
+
+      @include tablet {
+        padding-top: 181px;
+      }
 
       &:hover {
         color: $red;
@@ -282,7 +472,12 @@ body {
 
 .directions {
   position: relative;
+  padding-top: 36px;
   background-color: $white;
+
+  @include tablet {
+    padding-bottom: 32px;
+  }
 
   &:before {
     content: '';
@@ -295,8 +490,6 @@ body {
     opacity: 0.07;
   }
 
-
-
   .directions-content__title {
     margin: 0;
     margin-bottom: 50px;
@@ -304,6 +497,11 @@ body {
     font-weight: 700;
     font-family: $headings-font;
     text-align: center;
+
+    @include phone {
+      margin-bottom: 32px;
+      font-size: 22px;
+    }
   }
 
   .directions-content__list {
@@ -314,6 +512,19 @@ body {
     grid-template-rows: repeat(2, 190px);
     row-gap: 11px;
     column-gap: 37px;
+
+    @include small-desctop {
+      grid-template-columns: repeat(4, 225px);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include phone {
+      grid-template-columns: repeat(1, auto);
+      row-gap: 15px;
+    }
   }
 
   .directions-content__item {
@@ -324,6 +535,11 @@ body {
     font-size: 16px;
     font-weight: 400;
     text-align: left;
+
+    @include phone {
+      background-position: top center;
+      text-align: center;
+    }
 
   }
 
@@ -351,7 +567,7 @@ body {
     background-image: url(../assets/6.svg);
   }
 
-  .booking {
+  .bookings {
     background-image: url(../assets/4.svg);
   }
 
@@ -363,9 +579,17 @@ body {
 // Popular
 
 .popular {
-  padding-top: 84px;
+  padding-top: 134px;
   padding-bottom: 80px;
   background-color: $white;
+
+  @include small-desctop {
+    padding-top: 141px;
+  }
+
+  @include phone {
+    padding-top: 25px;
+  }
 
   .popular-content__title {
     margin: 0;
@@ -373,123 +597,169 @@ body {
     font-size: 30px;
     font-weight: 700;
     font-family: $headings-font;
-  }
 
-}
-
-.popular-content__list {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-
-  .popular-content__item {
-    position: relative;
-    padding: 7%;
-    font-size: 18px;
-    font-weight: 500;
-
-    &:not(:nth-child(3)) {
-      @include proportions(256px, 256px);
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 6px;
-      background-image: linear-gradient(180deg, #000000 0%, #FFFFFF 48.44%, #FFFFFF 76.04%, #000000 100%);
-      opacity: 0.7;
-      mix-blend-mode: multiply;
+    @include phone {
+      font-size: 22px;
     }
   }
 
-  .item-1 {
-    background: url(../assets/woman.png);
-  }
+  .popular-content__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
 
-  .item-2 {
-    background: url(../assets/olhon.png);
-  }
-
-  .item-3 {
-    background: url(../assets/datsan.png);
-    grid-column: 3/5;
-    grid-row: 1/3;
-    font-size: 24px;
-  }
-
-  .item-4 {
-    background: url(../assets/ulanude.png);
-  }
-
-  .item-5 {
-    background: url(../assets/eco.png);
-  }
-
-  .item-6 {
-    background: url(../assets/summer_bay.png);
-  }
-
-  .item-7 {
-    background: url(../assets/white_hotel.png);
-  }
-
-  .item-8 {
-    background: url(../assets/harbor.png);
-  }
-
-  .item-9 {
-    background: url(../assets/park-hotel.png);
-  }
-
-  .item-10 {
-    background: url(../assets/summer_olhon.png);
-  }
-
-  .item-11 {
-    background: url(../assets/park_hotel_baikal.png);
-  }
-
-  .item-12 {
-    background: url(../assets/winter_fairytail.png);
-  }
-
-  .item-13 {
-    font-size: 24px;
-    font-weight: 500;
-    background: url(../assets/all_offers.png);
-
-    a {
-      justify-content: center;
-      text-align: center;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(8, 1fr);
     }
 
-  }
+    @include phone {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
 
-  .popular-content__link {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .popular-content__item {
+      position: relative;
+      padding: 7%;
+      font-size: 18px;
+      font-weight: 500;
+      background-size: 100% 100%;
+      background-position: center center;
+      transition: 1s;
 
-    height: 100%;
-    z-index: 100;
-    text-decoration: none;
-    color: $white;
 
-    span {
-      &:nth-child(2) {
-        font-size: 16px;
-        font-weight: 400;
+      &:not(:nth-child(3)) {
+        @include proportions(256px, 256px);
+
+        @include small-desctop {
+          @include proportions(232px, 232px);
+        }
+
+        @include tablet {
+          @include proportions(320px, 320px);
+        }
+
+        @include ipad {
+          @include proportions (100%, 288px);
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 6px;
+        background-image: linear-gradient(180deg, #000000 0%, #FFFFFF 48.44%, #FFFFFF 76.04%, #000000 100%);
+        opacity: 0.7;
+        mix-blend-mode: multiply;
+      }
+
+      &:hover {
+        background-size: 150% 150%;
+      }
+
+    }
+
+    .item-1 {
+      background-image: url(../assets/woman.png);
+    }
+
+    .item-2 {
+      background-image: url(../assets/olhon.png);
+    }
+
+    .item-3 {
+      background-image: url(../assets/datsan.png);
+      grid-column: 3/5;
+      grid-row: 1/3;
+      font-size: 24px;
+
+      @include tablet {
+        grid-column: 1/3;
+        grid-row: 3/5;
+      }
+
+      @include phone {
+        grid-column: 1/1;
+        grid-row: 5/6;
+        // @include proportions (100%, 288px);
+        object-fit: cover;
       }
     }
 
+    .item-4 {
+      background-image: url(../assets/ulanude.png);
+    }
+
+    .item-5 {
+      background-image: url(../assets/eco.png);
+    }
+
+    .item-6 {
+      background-image: url(../assets/summer_bay.png);
+    }
+
+    .item-7 {
+      background-image: url(../assets/white_hotel.png);
+    }
+
+    .item-8 {
+      background-image: url(../assets/harbor.png);
+    }
+
+    .item-9 {
+      background-image: url(../assets/park-hotel.png);
+    }
+
+    .item-10 {
+      background-image: url(../assets/summer_olhon.png);
+    }
+
+    .item-11 {
+      background-image: url(../assets/park_hotel_baikal.png);
+    }
+
+    .item-12 {
+      background-image: url(../assets/winter_fairytail.png);
+    }
+
+    .item-13 {
+      font-size: 24px;
+      font-weight: 500;
+      background-image: url(../assets/all_offers.png);
+
+      a {
+        justify-content: center;
+        text-align: center;
+      }
+
+    }
+
+    .popular-content__link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 100%;
+      z-index: 100;
+      text-decoration: none;
+      color: $white;
+
+      span {
+        &:nth-child(2) {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+    }
   }
 }
 
@@ -532,6 +802,16 @@ body {
     align-items: flex-start;
     justify-content: space-between;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
+    img {
+      @include tablet {
+        width: 100%;
+      }
+    }
+
     .about-info {
 
       display: flex;
@@ -556,10 +836,18 @@ body {
         letter-spacing: 0.07rem;
         line-height: 1.5rem;
 
+        @include tablet {
+          margin-bottom: 20px;
+        }
+
       }
 
       .about-info__link {
         color: #76767A;
+
+        @include tablet {
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -572,6 +860,10 @@ body {
   padding-top: 40px;
   padding-bottom: 80px;
   background-color: $white;
+
+  @include phone {
+    padding-bottom: 38px;
+  }
 
 
   &::before {
@@ -588,6 +880,10 @@ body {
   .gallery-content {
     position: relative;
 
+    @include ipad {
+      padding-bottom: 54px;
+    }
+
     .gallery-content__title {
       margin: 0;
       margin-bottom: 60px;
@@ -595,6 +891,15 @@ body {
       font-size: 30px;
       font-weight: 700;
       font-family: $headings-font;
+
+      @include phone {
+        font-size: 22px;
+        margin-bottom: 32px;
+      }
+    }
+
+    .mobile-swiper {
+      display: none;
     }
 
     .gallery-slide {
@@ -613,6 +918,10 @@ body {
       top: 0;
       right: 0;
       @include proportions(300px, 44px);
+
+      @include tablet {
+        right: 19px;
+      }
 
       .swiper-button-prev,
       .swiper-button-next {
@@ -633,14 +942,32 @@ body {
 
       }
 
-      a {
+      .all-pics {
         line-height: 44px;
         color: $blue;
+
+        @include ipad {
+          display: none;
+        }
       }
     }
 
-  }
+    .all-pics__mobile {
+      display: none;
 
+      @include ipad {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        font-weight: 400;
+        color: $blue;
+      }
+
+    }
+  }
 }
 
 // General
@@ -649,6 +976,14 @@ body {
   padding-top: 92px;
   padding-bottom: 10px;
   background-color: $white;
+
+  @include phone {
+    padding-top: 33px;
+  }
+
+  @include phone {
+    padding-bottom: 25px;
+  }
 
   .general-content {
     .general-content__title {
@@ -659,23 +994,33 @@ body {
       font-family: $headings-font;
       text-transform: uppercase;
       text-align: center;
+
+      @include phone {
+        font-size: 22px;
+        margin-bottom: 21px;
+      }
     }
 
     .general-info {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+
     }
 
     .general-pics {
       position: relative;
       flex-basis: 34%;
 
+      @include tablet {
+        display: none;
+      }
+
       img {
         &:last-child {
           position: relative;
           top: -110px;
-          left: 86px;
+          left: 15%;
         }
       }
     }
@@ -684,11 +1029,20 @@ body {
       flex-basis: 66%;
       align-self: stretch;
 
+      @include tablet {
+        flex-basis: 100%;
+      }
+
       p {
         margin: 0;
         font-size: 18px;
         font-weight: 400;
         line-height: 25.2px;
+
+        @include phone {
+          font-size: 16px;
+          line-height: 1.4;
+        }
 
         &:not(:last-child) {
           margin-bottom: 12px;
@@ -701,12 +1055,16 @@ body {
 // Counts
 
 .counts {
-  background-color: $white;
   padding-bottom: 45px;
+  background-color: $white;
 
   .counts-content {
     padding-top: 44px;
     border-top: 2px solid #C4C4C4;
+
+    @include phone {
+      padding-top: 25px;
+    }
 
     .counts-content__list {
       display: flex;
@@ -715,8 +1073,20 @@ body {
       margin: 0;
       padding: 0;
 
+      @include ipad {
+        flex-wrap: wrap;
+      }
+
       .counts-content__item {
         flex-basis: 18%;
+
+        @include phone {
+          flex-basis: 50%;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
 
         span {
           display: inline-block;
@@ -726,11 +1096,19 @@ body {
             font-size: 54px;
             font-weight: 700;
             color: $green;
+
+            @include ipad {
+              font-size: 32px;
+            }
           }
 
           &:nth-child(2) {
             font-size: 20px;
             font-weight: 500;
+
+            @include ipad {
+              font-size: 14px;
+            }
           }
 
         }
@@ -750,6 +1128,10 @@ body {
   padding-bottom: 80px;
   background-color: $gray;
 
+  @include phone {
+    padding-top: 17px;
+  }
+
   .booking-content {
 
     display: flex;
@@ -763,16 +1145,28 @@ body {
       font-size: 30px;
       font-weight: 700;
       font-family: $headings-font;
+
+      @include phone {
+        font-size: 22px;
+        text-align: center;
+      }
     }
 
     .booking-content__form {
-      max-width: 75%;
-      width: 100%;
+      max-width: 840px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(4, 44px) 60px;
-      row-gap: 24px;
       column-gap: 32px;
+      row-gap: 24px;
+
+      @include phone {
+        max-width: none;
+        grid-template-columns: 1fr;
+      }
+
+      .booking-label {
+        height: 44px;
+      }
 
       .booking-input {
         padding-left: 10px;
@@ -788,10 +1182,17 @@ body {
         }
       }
 
-      textarea {
+      textarea.booking-input {
+        resize: none;
         grid-column: 2/4;
         grid-row: 3/5;
-        resize: none;
+
+        @include phone {
+          grid-column: 1/2;
+          grid-row: 9/11;
+          height: 180px;
+        }
+
       }
 
       .booking-btn {
@@ -806,10 +1207,19 @@ body {
       }
 
       .booking-check {
-        grid-column: 2/4;
         width: 100%;
         text-align: right;
         line-height: 60px;
+        grid-column: 2/4;
+        @include phone {
+          grid-column: 1/2;
+        }
+
+        @include phone {
+          text-align: left;
+          max-width: 90%;
+          line-height: 1.1;
+        }
 
 
         input {
@@ -830,8 +1240,81 @@ body {
   background-color: $footer-gray;
   color: $white;
 
+  .mobile-menu {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+
+
+      .burger-container {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+
+      .footer-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include proportions(32px, 24px);
+        padding: 0;
+        margin-right: 20px;
+        background-color: transparent;
+
+        span {
+          display: block;
+          width: 100%;
+          height: 4px;
+          background-color: $white;
+        }
+
+      }
+
+      a {
+        padding-left: 54px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        line-height: 40px;
+      }
+
+      .footer-content__phone {
+        text-decoration: none;
+        background-image: url(../assets/phone.svg);
+        @include ipad {
+          display: none;
+        }
+      }
+
+      .footer-content__mail {
+        background-image: url(../assets/mail.svg);
+        @include ipad {
+          display: none;
+        }
+      }
+
+      
+
+    }
+  }
+
   .footer-menu {
     padding-bottom: 35px;
+
+    @include tablet {
+      display: none;
+    }
 
     .menu-list {
       margin: 0;
@@ -883,11 +1366,18 @@ body {
     border-top: 1px solid #FFFFFF;
     padding-top: 30px;
     padding-bottom: 45px;
+    @include phone {
+      flex-direction: column;
+    }
 
     .contact-info {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+
+      @include phone {
+        margin-bottom: 20px;
+      }
 
       .contact-info__general,
       .contact-info__booking {
@@ -897,7 +1387,7 @@ body {
       .contact-info__name {
         margin: 0;
         margin-bottom: 10px;
-        font-weight: 14px;
+        font-size: 14px;
         font-weight: 500;
       }
 
@@ -905,6 +1395,10 @@ body {
         display: block;
         font-weight: 400;
         opacity: 0.8;
+
+        @include phone {
+          font-size: 14px;
+        }
       }
 
       .contact-info__booking {
@@ -932,11 +1426,22 @@ body {
           opacity: 0.8;
         }
       }
+
+      .contact-info__booking,
+      .contact-info__adress {
+        @include tablet {
+          display: none;
+        }
+      }
     }
 
     .confidential-info {
       flex-basis: 30%;
       text-align: right;
+
+      @include phone {
+        font-size: 12px;
+      }
 
       a {
         color: $white;
