@@ -198,7 +198,7 @@ body {
   padding-top: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .header-menu {
     display: none;
   }
@@ -284,6 +284,12 @@ body {
     max-width: 60%;
     font-size: 64px;
     line-height: 83.2px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-content .hero-content__title {
+    font-size: 54px;
   }
 }
 
@@ -1226,7 +1232,7 @@ body {
   row-gap: 24px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .booking .booking-content .booking-content__form {
     max-width: none;
     grid-template-columns: 1fr;
@@ -1258,7 +1264,7 @@ body {
   grid-row: 3/5;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .booking .booking-content .booking-content__form textarea.booking-input {
     grid-column: 1/2;
     grid-row: 9/11;
@@ -1284,13 +1290,13 @@ body {
   grid-column: 2/4;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .booking .booking-content .booking-content__form .booking-check {
     grid-column: 1/2;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .booking .booking-content .booking-content__form .booking-check {
     text-align: left;
     max-width: 90%;
