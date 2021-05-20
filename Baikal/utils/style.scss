@@ -195,13 +195,12 @@ body {
 .header-menu {
   padding-top: 20px;
 
-  @include phone {
+  @include ipad {
     display: none;
   }
 }
 
 .header-menu__nav {
-
 
   a {
     text-decoration: none;
@@ -281,6 +280,10 @@ body {
       max-width: 60%;
       font-size: 64px;
       line-height: 83.2px;
+    }
+
+    @include ipad {
+      font-size: 54px;
     }
 
     @include phone {
@@ -1159,7 +1162,8 @@ body {
       column-gap: 32px;
       row-gap: 24px;
 
-      @include phone {
+
+      @include ipad {
         max-width: none;
         grid-template-columns: 1fr;
       }
@@ -1187,7 +1191,8 @@ body {
         grid-column: 2/4;
         grid-row: 3/5;
 
-        @include phone {
+
+        @include ipad {
           grid-column: 1/2;
           grid-row: 9/11;
           height: 180px;
@@ -1211,11 +1216,11 @@ body {
         text-align: right;
         line-height: 60px;
         grid-column: 2/4;
-        @include phone {
+        @include ipad {
           grid-column: 1/2;
         }
 
-        @include phone {
+        @include ipad {
           text-align: left;
           max-width: 90%;
           line-height: 1.1;
