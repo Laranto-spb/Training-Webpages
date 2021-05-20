@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  //Tabs for working 
+  //Tabs for working
 
   document.querySelectorAll('.tabs-btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
@@ -34,22 +34,20 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-
   })
 
 
-
-  //Burger 
+  //Burger
 
   const burgerBtn = document.querySelector('.burger');
   const burgerMenu = document.querySelector('.burger__menu');
   const body = document.querySelector('.body');
-  
+
   burgerBtn.addEventListener('click', function () {
 
     burgerMenu.classList.toggle('active');
     body.classList.toggle('lock');
-    
+
     document.querySelector('.line-1').classList.toggle('active')
 
     document.querySelector('.line-2').classList.toggle('active')
@@ -77,9 +75,5 @@ window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.line-3').classList.add('lock')
     })
   })
-
-  
-
-
 
 })
