@@ -218,6 +218,7 @@ button {
 
 .swiper-container {
   width: 100%;
+  overflow: hidden !important;
 }
 
 .swiper-324 {
@@ -226,6 +227,7 @@ button {
 
 .swiper-1920 {
   height: 618px;
+
 }
 
 .slide-1 {
@@ -597,6 +599,8 @@ button {
   display: block;
   width: 60px;
   height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .facebook__link {
